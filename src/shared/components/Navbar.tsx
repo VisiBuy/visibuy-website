@@ -23,16 +23,16 @@ export default function Navbar() {
 
         {/* Desktop Navigation (ONLY lg+) */}
         <nav className="hidden items-center gap-6 lg:flex">
-          <Link href="#" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
+          <Link href="/" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
             Home
           </Link>
-          <Link href="#" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
+          <Link href="how-its-works" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
             How it Works
           </Link>
           <Link href="#" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
             Pricing
           </Link>
-          <Link href="#" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
+          <Link href="about" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
             About Us
           </Link>
         </nav>
@@ -40,14 +40,14 @@ export default function Navbar() {
         {/* Desktop Actions (ONLY lg+) */}
         <div className="hidden items-center gap-3 lg:flex">
           <Link
-            href="#"
+            href="https://app.visibuy.com.ng"
             className="rounded-md border border-neutral-300 px-4 py-1.5 text-sm font-medium text-neutral-700 hover:bg-neutral-50"
           >
             Log in
           </Link>
 
           <Link
-            href="#"
+            href="https://app.visibuy.com.ng/signup"
             className="rounded-md bg-blue-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-blue-700"
           >
             Get Started
