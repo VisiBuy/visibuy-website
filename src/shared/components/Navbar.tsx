@@ -26,13 +26,13 @@ export default function Navbar() {
           <Link href="/" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
             Home
           </Link>
-          <Link href="how-its-works" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
+          <Link href="/how-its-works" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
             How it Works
           </Link>
           <Link href="#" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
             Pricing
           </Link>
-          <Link href="about" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
+          <Link href="/about" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
             About Us
           </Link>
         </nav>
