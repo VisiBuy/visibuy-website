@@ -7,6 +7,7 @@ import Navbar from "@/features/home/components/Navbar";
 import SimpleCreditBilling from "@/features/home/components/SimpleCreditBilling";
 import VisualVerificationEngine from "@/features/home/components/VisualVerificationEngine";
 import WhatAIDetects from "@/features/home/components/WhatAIDetects";
+import PricingPage from "@/features/Pricing/page";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
       <SimpleCreditBilling />
       <CTASection />
       <Footer />
+      <PricingPage/>
     </main>
   );
 }
