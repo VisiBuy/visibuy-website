@@ -7,12 +7,10 @@ import Navbar from "@/features/home/components/Navbar";
 import SimpleCreditBilling from "@/features/home/components/SimpleCreditBilling";
 import VisualVerificationEngine from "@/features/home/components/VisualVerificationEngine";
 import WhatAIDetects from "@/features/home/components/WhatAIDetects";
-import PricingPage from "@/features/Pricing/page";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col text-slate-50">
-      <Navbar />
+    <main className="flex min-h-screen flex-col bg-slate-950 text-slate-50">
       <HomeHero />
       <HowItWorksSteps />
       <EarnTrustAsYouSell />
@@ -21,7 +19,6 @@ export default function HomePage() {
       <SimpleCreditBilling />
       <CTASection />
       <Footer />
-      <PricingPage/>
     </main>
   );
 }
