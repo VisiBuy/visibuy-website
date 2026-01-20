@@ -36,7 +36,7 @@ export function Hero() {
           {/* iPhone container */}
           <div className="flex w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[422px] aspect-[422/400] items-center justify-center rounded-card bg-neutral-200">
             <Image
-              src="/images/home/iphone-12-Mini.png"
+              src="/images/home/iPhone-12-Mini.png"
               alt="Visibuy mobile verification flow"
               width={193}
               height={391}
@@ -48,7 +48,7 @@ export function Hero() {
           {/* Product image container */}
           <div className="flex w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[422px] aspect-[422/400] items-center justify-center rounded-card overflow-hidden">
             <Image
-              src="/images/home/product-hero.png"
+              src="/images/home/Product-hero.png"
               alt="Product thumbnail with Visibuy verified badge"
               width={422}
               height={400}
