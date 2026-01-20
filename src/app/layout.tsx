@@ -3,6 +3,9 @@ import { Montserrat, Open_Sans } from "next/font/google";
 import "@/app/globals.css";
 import "swiper/css";
 
+import { Header } from "@/shared/components/header/Header";
+import { Footer } from "@/shared/components/footer/Footer"; 
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -40,9 +43,19 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
+    <html
+      lang="en"
+      className={`${montserrat.variable} ${openSans.variable}`}
+    >
       <body className="min-h-screen bg-neutral-100 text-neutral-900 antialiased font-sans">
-        {children}
+        {/* Global Header */}
+        <Header />
+
+        {/* Page Content */}
+        <main>{children}</main>
+
+        {/* Global Footer */}
+        <Footer /> 
       </body>
     </html>
   );
