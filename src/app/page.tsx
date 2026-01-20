@@ -1,11 +1,27 @@
-import { HomeHero } from "@/features/home";
+
+import {
+  Hero,
+  BuyerDisappears,
+  TrustSteps,
+  PaymentTrust,
+  HowItWorks,
+  Testimonials,
+  IntegrationsAndPricing,
+  FinalCta,
+  
+} from "@/features/home";
 
 export default function HomePage() {
   return (
     <main className="flex min-h-screen flex-col bg-slate-950 text-slate-50">
-      <HomeHero />
+      <Hero />
+      <BuyerDisappears />
+      <TrustSteps />
+      <PaymentTrust />
+      <HowItWorks />
+      <Testimonials />
+      <IntegrationsAndPricing />
+      <FinalCta />
     </main>
   );
 }
-
-

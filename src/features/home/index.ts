@@ -1,3 +1,9 @@
-export { HomeHero } from "./components/Hero";
-
-
+export { Hero } from "./components/Hero";
+export { BuyerDisappears } from "./components/BuyerDisappears";
+export { TrustSteps } from "./components/TrustSteps";
+export { PaymentTrust } from "./components/PaymentTrust";
+export { HowItWorks } from "./components/HowItWorks";
+export { Testimonials } from "./components/Testimonials";
+export { IntegrationsAndPricing } from "./components/IntergrationsAndPricing";
+export { FinalCta } from "./components/FinalCta";
+export { Footer } from "../../shared/components/footer/Footer";
