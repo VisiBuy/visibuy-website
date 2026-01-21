@@ -10,9 +10,8 @@ export default function WhatAIDetects() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-4 gap-10">
-          {/* Refused images */}
-          <div className=" border rounded-2xl shadow-sm overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-10">
+          <div className="border rounded-2xl shadow-sm overflow-hidden">
             <img
               src="/reused.png"
               alt="reused-image"
@@ -20,8 +19,7 @@ export default function WhatAIDetects() {
             />
           </div>
 
-          {/* Edited Photos */}
-          <div className=" border rounded-2xl shadow-sm overflow-hidden">
+          <div className="border rounded-2xl shadow-sm overflow-hidden">
             <img
               src="/edited.png"
               alt="edited-image"
@@ -29,8 +27,7 @@ export default function WhatAIDetects() {
             />
           </div>
 
-          {/* Stolen Images */}
-          <div className=" border rounded-2xl shadow-sm overflow-hidden">
+          <div className="border rounded-2xl shadow-sm overflow-hidden">
             <img
               src="/stolen.png"
               alt="stolen-image"
@@ -38,8 +35,7 @@ export default function WhatAIDetects() {
             />
           </div>
 
-          {/* Ai-Generated Images */}
-          <div className=" border rounded-2xl shadow-sm overflow-hidden">
+          <div className="border rounded-2xl shadow-sm overflow-hidden">
             <img
               src="/ai-gen.png"
               alt="A.i-image"
@@ -47,6 +43,24 @@ export default function WhatAIDetects() {
             />
           </div>
         </div>
+
+       {/* AI Disclaimer */}
+<div className="mt-12 max-w-3xl mx-auto rounded-xl border border-blue-100 bg-blue-50/60 px-6 py-5 text-center">
+  <p className="text-sm font-semibold text-blue-700">
+    AI signals are informational, not guarantees.
+  </p>
+
+  <p className="mt-2 text-sm text-neutral-700 leading-relaxed">
+    Visibuy’s AI highlights potential risk indicators based on image patterns
+    and metadata. Results may not be definitive and should be used alongside
+    human judgment.
+  </p>
+
+  <p className="mt-2 text-xs font-medium text-green-700">
+    AI analysis does not certify authenticity, ownership, or product condition.
+  </p>
+</div>
+
       </div>
     </section>
   );
