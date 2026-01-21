@@ -65,13 +65,13 @@ export default function ReputationSection() {
                 </li>
               </ul>
 
-              <p className="mt-4 text-xs text-neutral-600">
+              {/* <p className="mt-4 text-xs text-neutral-600">
                 All sellers start at{" "}
                 <span className="font-medium text-yellow-600">
                   40 (Bronze – New)
                 </span>{" "}
                 and grow through consistent, trustworthy activity.
-              </p>
+              </p> */}
             </div>
 
             {/* Badge Levels */}

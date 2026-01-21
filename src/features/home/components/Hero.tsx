@@ -50,7 +50,7 @@ export function Hero() {
               alt="Visibuy mobile verification flow"
               width={193}
               height={391}
-              className="h-auto w-auto max-h-full max-w-[95%] md:max-w-[70%] rounded-card object-contain"
+              className="h-auto max-h-full max-w-[95%] md:max-w-[70%] rounded-card object-contain"
               priority
             />
           </div>
