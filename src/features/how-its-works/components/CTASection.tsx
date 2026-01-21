@@ -15,11 +15,14 @@ export default function CTASection() {
 
         {/* CTA Button */}
         <Link
-          href="#"
-          className="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-full shadow-md hover:scale-[1.02] transition"
-        >
-          Start Free — Create Your First Verification
-        </Link>
+  href="https://app.visibuy.com.ng/signup"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-full shadow-md hover:scale-[1.02] transition"
+>
+  Start Free — Create Your First Verification
+</Link>
+
 
         {/* Features */}
         <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm">

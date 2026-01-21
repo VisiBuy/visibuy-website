@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const SellWithProofSection: React.FC = () => {
   return (
@@ -27,9 +28,15 @@ const SellWithProofSection: React.FC = () => {
               verification at a time.
             </p>
 
-            <button className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 hover:bg-neutral-100">
-              Get Started For Free
-            </button>
+            <Link
+              href="https://app.visibuy.com.ng/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 hover:bg-neutral-100">
+                Get Started For Free
+              </button>
+            </Link>
           </div>
 
           {/* Image — MADE BIGGER (DESKTOP ONLY) */}
@@ -76,9 +83,15 @@ const SellWithProofSection: React.FC = () => {
             />
           </div>
 
-          <button className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 hover:bg-neutral-100">
-            Get Started For Free
-          </button>
+          <Link
+            href="https://app.visibuy.com.ng/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 hover:bg-neutral-100">
+              Get Started For Free
+            </button>
+          </Link>
         </div>
       </div>
     </section>

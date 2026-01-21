@@ -1,4 +1,5 @@
 import { IoIosPlay } from "react-icons/io";
+import Link from "next/link";
 
 export function HomeHero() {
   return (
@@ -22,17 +23,23 @@ export function HomeHero() {
 
         {/* CTA Buttons */}
         <div className="mt-8 mb-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-900 transition">
-            Get Started →
-          </button>
+          <Link
+  href="https://app.visibuy.com.ng/signup"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-primary to-brand-success px-8 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:scale-[1.03] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/40">
+    Get Started →
+  </button>
+</Link>
 
-          <button className="flex items-center gap-3">
+          {/* <button className="flex items-center gap-3">
             <span className="flex items-center justify-center w-10 h-10 rounded-full border border-black">
               <IoIosPlay className="text-2xl text-black ml-[2px]" />
             </span>
 
             <span className="text-sm text-black font-medium">Watch Demo</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
