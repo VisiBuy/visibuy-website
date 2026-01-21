@@ -9,7 +9,7 @@ export function Hero() {
         {/* Text content */}
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="font-heading text-2xl font-bold leading-tight text-neutral-900 sm:text-3xl md:text-4xl lg:text-5xl">
-            Buyers Don't Trust Words,
+            Buyers Don&apos;t Trust Words,
             <br />
             <span className="text-brand-primary">Show Them Proof</span>
           </h1>
@@ -20,7 +20,11 @@ export function Hero() {
           </p>
 
           <div className="mt-6 flex flex-col items-stretch gap-4 md:flex-row md:items-center md:justify-center md:gap-6 px-4 md:px-0">
-            <Link href="https://app.visibuy.com.ng/signup" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://app.visibuy.com.ng/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="w-full md:w-auto px-8 py-6 text-base font-medium">
                 Create Your First Verification →
               </Button>
@@ -46,7 +50,7 @@ export function Hero() {
               alt="Visibuy mobile verification flow"
               width={193}
               height={391}
-              className="h-auto w-auto max-h-full max-w-[70%] rounded-card object-contain"
+              className="h-auto w-auto max-h-full max-w-[95%] md:max-w-[70%] rounded-card object-contain"
               priority
             />
           </div>

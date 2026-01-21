@@ -56,7 +56,7 @@ export function Footer() {
             </div>
 
             <div className="hidden lg:block mt-6 text-xs sm:text-sm">
-              © 2024–2025 VisiBuy. All rights reserved.
+              © 2024–2026 VisiBuy. All rights reserved.
             </div>
           </div>
 
@@ -115,7 +115,7 @@ export function Footer() {
 
             {/* Mobile copyright */}
             <div className="mt-8 text-center text-xs sm:text-sm md:hidden">
-              © 2024–2025 VisiBuy. All rights reserved.
+              © 2024–2026 VisiBuy. All rights reserved.
             </div>
           </div>
         </div>
