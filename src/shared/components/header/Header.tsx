@@ -76,29 +76,29 @@ export default function Header() {
       {open && (
         <div className="border-t border-neutral-200 bg-white lg:hidden">
           <nav className="flex flex-col gap-4 px-5 py-4">
-            <Link href="#" onClick={() => setOpen(false)}>
+            <Link href="/" onClick={() => setOpen(false)}>
               Home
             </Link>
-            <Link href="#" onClick={() => setOpen(false)}>
+            <Link href="/how-its-works" onClick={() => setOpen(false)}>
               How it Works
             </Link>
             <Link href="#" onClick={() => setOpen(false)}>
               Pricing
             </Link>
-            <Link href="#" onClick={() => setOpen(false)}>
+            <Link href="/about" onClick={() => setOpen(false)}>
               About Us
             </Link>
 
             <div className="mt-4 flex flex-col gap-3">
               <Link
-                href="#"
+                href="https://app.visibuy.com.ng"
                 className="rounded-md border border-neutral-300 px-4 py-2 text-center text-sm font-medium"
               >
                 Log in
               </Link>
 
               <Link
-                href="#"
+                href="https://app.visibuy.com.ng/signup"
                 className="rounded-md bg-blue-600 px-4 py-2 text-center text-sm font-semibold text-white"
               >
                 Get Started
