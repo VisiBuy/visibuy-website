@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/shared/components/ui/button";
 
 export function Hero() {
@@ -19,15 +20,20 @@ export function Hero() {
           </p>
 
           <div className="mt-6 flex flex-col items-stretch gap-4 md:flex-row md:items-center md:justify-center md:gap-6 px-4 md:px-0">
-            <Button className="w-full md:w-auto px-8 py-6 text-base font-medium">
-              Create Your First Verification →
-            </Button>
-            <Button
-              variant="secondary"
-              className="w-full md:w-auto px-8 py-6 text-base font-medium"
-            >
-              See How Visibuy Works
-            </Button>
+            <Link href="https://app.visibuy.com.ng/signup" target="_blank" rel="noopener noreferrer">
+              <Button className="w-full md:w-auto px-8 py-6 text-base font-medium">
+                Create Your First Verification →
+              </Button>
+            </Link>
+
+            <Link href="/how-its-works">
+              <Button
+                variant="secondary"
+                className="w-full md:w-auto px-8 py-6 text-base font-medium"
+              >
+                See How Visibuy Works
+              </Button>
+            </Link>
           </div>
         </div>
 

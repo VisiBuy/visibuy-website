@@ -3,6 +3,7 @@ import { Button } from "@/shared/components/ui/button";
 import { Card, CardContent } from "@/shared/components/ui/card";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 export function IntegrationsAndPricing() {
   return (
@@ -208,12 +209,18 @@ export function IntegrationsAndPricing() {
               </p>
             </div>
             <div>
-              <Button
-                size="lg"
-                className="mt-5 h-10 px-6 text-xs font-semibold shadow-lg sm:mt-6 sm:h-11 sm:px-8 sm:text-sm md:h-12 md:px-10 md:text-base"
-              >
-                Load Credit And Start Verifying →
-              </Button>
+              <Link
+  href="https://app.visibuy.com.ng/signup"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    className="mt-5 h-10 px-6 text-xs font-semibold shadow-lg sm:mt-6 sm:h-11 sm:px-8 sm:text-sm md:h-12 md:px-10 md:text-base"
+  >
+    Load Credit And Start Verifying →
+  </Button>
+</Link>
             </div>
           </div>
         </div>

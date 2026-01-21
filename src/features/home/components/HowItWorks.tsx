@@ -12,6 +12,7 @@ import {
 import { Button } from "@/shared/components/ui/button";
 import { Card, CardContent } from "@/shared/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 export function HowItWorks() {
   return (
@@ -583,13 +584,19 @@ export function HowItWorks() {
         {/* CTA */}
         <div className="mt-10 sm:mt-12 lg:mt-16 px-4">
           <div className="flex justify-center">
-            <Button
-              size="lg"
-              className="w-full sm:w-auto h-11 sm:h-12 px-6 sm:px-8 text-sm sm:text-base font-semibold shadow-lg max-w-md sm:max-w-none"
+            <Link
+              href="https://app.visibuy.com.ng/signup"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Start Free - Create Your First Verification
-              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-            </Button>
+              <Button
+                size="lg"
+                className="w-full sm:w-auto h-11 sm:h-12 px-6 sm:px-8 text-sm sm:text-base font-semibold shadow-lg max-w-md sm:max-w-none"
+              >
+                Start Free - Create Your First Verification
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

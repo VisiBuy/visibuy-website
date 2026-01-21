@@ -3,7 +3,7 @@ import { Montserrat, Open_Sans } from "next/font/google";
 import "@/app/globals.css";
 import "swiper/css";
 
-import { Header } from "@/shared/components/header/Header";
+import Header from "@/shared/components/header/Header";
 import { Footer } from "@/shared/components/footer/Footer"; 
 
 const montserrat = Montserrat({

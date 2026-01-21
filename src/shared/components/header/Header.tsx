@@ -1,87 +1,112 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/shared/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/shared/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "How It Works", href: "#how-it-works", isAnchor: true },
-  { label: "Pricing", href: "#pricing", isAnchor: true },
-  { label: "About Us", href: "#about", isAnchor: true },
-];
+export default function Header() {
+  const [open, setOpen] = useState(false);
 
-export function Header() {
   return (
-    <header className=" sticky top-0 z-100 border-b border-neutral-200 bg-neutral-200">
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-4 md:px-8">
+    <header className="w-full border-b border-neutral-200 bg-white">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 lg:px-12">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-heading text-xl font-bold text-brand-primary"
-        >
+        <Link href="/" className="flex items-center">
           <Image
-            src="/images/shared/Visibuy-logo-blue.png"
-            alt="VisiBuy"
-            width={100}
-            height={100}
+            src="/images/trust/VisiBuy - Logo.png"
+            alt="VisiBuy logo"
+            width={162}
+            height={28}
+            priority
           />
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-sm font-medium text-neutral-700 hover:text-brand-primary transition"
-            >
-              {item.label}
-            </a>
-          ))}
+        {/* Desktop Navigation (ONLY lg+) */}
+        <nav className="hidden items-center gap-6 lg:flex">
+          <Link href="/" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
+            Home
+          </Link>
+          <Link href="/how-its-works" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
+            How it Works
+          </Link>
+          <Link href="#" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
+            Pricing
+          </Link>
+          <Link href="/about" className="text-sm font-medium text-neutral-700 hover:text-neutral-900">
+            About Us
+          </Link>
         </nav>
 
-        {/* Actions */}
-        <div className="hidden lg:flex items-center gap-3">
-          <Button
-            variant="secondary"
-            className="border-neutral-300 text-neutral-700"
+        {/* Desktop Actions (ONLY lg+) */}
+        <div className="hidden items-center gap-3 lg:flex">
+          <Link
+            href="https://app.visibuy.com.ng"
+            className="rounded-md border border-neutral-300 px-4 py-1.5 text-sm font-medium text-neutral-700 hover:bg-neutral-50"
           >
             Log in
-          </Button>
-          <Button>Get Started</Button>
+          </Link>
+
+          <Link
+            href="https://app.visibuy.com.ng/signup"
+            className="rounded-md bg-blue-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-blue-700"
+          >
+            Get Started
+          </Link>
         </div>
 
-        {/* Mobile Nav */}
-        <Sheet>
-          <SheetTrigger className="lg:hidden h-9 w-9 bg-white rounded-full flex items-center justify-center">
-            <Menu className="h-6 w-6 text-neutral-800  " />
-          </SheetTrigger>
-          <SheetContent side="right" className="pt-10">
-            <div className="flex flex-col gap-6">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-base font-medium text-neutral-800"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <div className="pt-4 flex flex-col gap-3">
-                <Button variant="secondary">Log in</Button>
-                <Button>Get Started</Button>
-              </div>
-            </div>
-          </SheetContent>
-        </Sheet>
+        {/* Hamburger (Phone + Tablet) */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="flex items-center lg:hidden"
+          aria-label="Toggle menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
+
+      {/* Mobile / Tablet Menu */}
+      {open && (
+        <div className="border-t border-neutral-200 bg-white lg:hidden">
+          <nav className="flex flex-col gap-4 px-5 py-4">
+            <Link href="#" onClick={() => setOpen(false)}>
+              Home
+            </Link>
+            <Link href="#" onClick={() => setOpen(false)}>
+              How it Works
+            </Link>
+            <Link href="#" onClick={() => setOpen(false)}>
+              Pricing
+            </Link>
+            <Link href="#" onClick={() => setOpen(false)}>
+              About Us
+            </Link>
+
+            <div className="mt-4 flex flex-col gap-3">
+              <Link
+                href="#"
+                className="rounded-md border border-neutral-300 px-4 py-2 text-center text-sm font-medium"
+              >
+                Log in
+              </Link>
+
+              <Link
+                href="#"
+                className="rounded-md bg-blue-600 px-4 py-2 text-center text-sm font-semibold text-white"
+              >
+                Get Started
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

@@ -9,12 +9,12 @@ import AiPoweredVerificationSection from "@/features/trust-safety/sections/AiPow
 import DataPrivacySecuritySection from "@/features/trust-safety/sections/DataPrivacySecuritySection";
 import ResolutionAndRulesSection from "@/features/trust-safety/sections/ResolutionAndRulesSection";
 import TrustMakesSellingSection from "@/features/trust-safety/sections/TrustMakesSellingSection";
-import Navbar from "@/shared/components/Navbar";
+// import Navbar from "@/shared/components/Navbar";
 
 export default function TrustSafetyPage() {
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <TrustSafetyHero />
       <RiskWarningSection />
       <BuiltForTrustSection />
