@@ -1,13 +1,14 @@
 import { Button } from "@/shared/components/ui/button";
 import { TrustStepCard } from "./TrustStepCard";
 import { Upload, Link2, Eye } from "lucide-react";
+import Link from "next/link";
 
 export function TrustSteps() {
   return (
     <section className="bg-neutral-200">
       <div className="mx-auto max-w-[1280px] px-4 py-16 md:px-8 md:py-24">
         {/* Heading */}
-        <div className="mx-auto max-w-3xl text-center  ">
+        <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-heading text-2xl font-bold text-neutral-900 md:text-3xl lg:text-3xl sm:text-4xl">
             Turn Doubts Into{" "}
             <span className="bg-gradient-to-r from-brand-primary to-brand-success bg-clip-text text-transparent font-bold">
@@ -35,7 +36,13 @@ export function TrustSteps() {
           </p>
 
           <div className="mt-6">
-            <Button>Create Verification Link →</Button>
+            <Link
+              href="https://app.visibuy.com.ng/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>Create Verification Link →</Button>
+            </Link>
           </div>
         </div>
 
@@ -45,7 +52,7 @@ export function TrustSteps() {
             step="Step 1"
             title="Upload Proof"
             description="Add clear live pictures or videos of your actual product. Our system automatically timestamps it with your seller ID."
-            icon={<Upload className="h-6 w-6 text-brand-primary " />}
+            icon={<Upload className="h-6 w-6 text-brand-primary" />}
             badgeColor="primary"
             bgColor="blue"
           />

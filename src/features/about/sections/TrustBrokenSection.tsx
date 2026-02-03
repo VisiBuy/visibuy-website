@@ -80,23 +80,24 @@ export default function TrustIsBrokenSection() {
           </div>
 
           {/* PHONE IMAGES (BOTTOM on tablet, LEFT on desktop) */}
-          <div className="order-2 lg:order-1 grid grid-cols-2 gap-5">
-            <Image
-              src="/images/about/chat-proof.png"
-              alt=""
-              width={360}
-              height={640}
-              className="w-full rounded-2xl bg-white object-cover shadow-sm"
-            />
+          <div className="order-2 lg:order-1 grid grid-cols-1 lg:grid-cols-2 gap-5">
+  <Image
+    src="/images/about/chat-proof.png"
+    alt=""
+    width={360}
+    height={640}
+    className="w-full rounded-2xl bg-white object-cover shadow-sm"
+  />
 
-            <Image
-              src="/images/about/chat-proof-2.png"
-              alt=""
-              width={360}
-              height={640}
-              className="w-full rounded-2xl bg-white object-cover shadow-sm"
-            />
-          </div>
+  <Image
+    src="/images/about/chat-proof-2.png"
+    alt=""
+    width={360}
+    height={640}
+    className="w-full rounded-2xl bg-white object-cover shadow-sm"
+  />
+</div>
+
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
 import { Button } from "@/shared/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function FinalCta() {
   return (
@@ -34,12 +35,18 @@ export function FinalCta() {
           </div>
 
           {/* CTA Button */}
-          <Button
-            size="lg"
-            className="mt-8 h-10 rounded-full bg-brand-primary px-6 text-xs font-semibold text-white shadow-xl hover:bg-white hover:text-brand-primary hover:shadow-2xl transition-all sm:mt-10 sm:h-11 sm:px-8 sm:text-sm md:mt-12 md:h-12 md:px-10 md:text-base lg:px-12"
-          >
-            Get Started For Free →
-          </Button>
+          <Link
+  href="https://app.visibuy.com.ng/signup"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    className="mt-8 h-10 rounded-full bg-brand-primary px-6 text-xs font-semibold text-white shadow-xl hover:bg-white hover:text-brand-primary hover:shadow-2xl transition-all sm:mt-10 sm:h-11 sm:px-8 sm:text-sm md:mt-12 md:h-12 md:px-10 md:text-base lg:px-12"
+  >
+    Get Started For Free →
+  </Button>
+</Link>
         </div>
       </div>
     </section>

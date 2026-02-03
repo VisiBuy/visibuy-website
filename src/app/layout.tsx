@@ -3,8 +3,9 @@ import { Montserrat, Open_Sans } from "next/font/google";
 import "@/app/globals.css";
 import "swiper/css";
 
-import { Header } from "@/shared/components/header/Header";
-import { Footer } from "@/shared/components/footer/Footer"; 
+import Header from "@/shared/components/header/Header";
+import { Footer } from "@/shared/components/footer/Footer";
+import { ConsentBanner } from "../shared/components/ui/ConsentBanner";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -53,7 +54,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
         {/* Page Content */}
         <main>{children}</main>
-
+        <ConsentBanner />
         {/* Global Footer */}
         <Footer /> 
       </body>

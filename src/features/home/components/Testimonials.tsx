@@ -2,6 +2,7 @@ import { Star, MapPin, Crown } from "lucide-react";
 import { Button } from "@/shared/components/ui/button";
 import { Card, CardContent } from "@/shared/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Testimonials() {
   return (
@@ -192,12 +193,18 @@ export function Testimonials() {
               Start building trust and closing more sales today
             </p>
 
-            <Button
-              size="lg"
-              className="mt-5 h-10 px-6 text-xs font-semibold text-brand-primary hover:bg-neutral-50 shadow-lg sm:mt-6 sm:h-11 sm:px-8 sm:text-sm bg-white"
-            >
-              Create Your Free Account →
-            </Button>
+            <Link
+  href="https://app.visibuy.com.ng/signup"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    className="mt-5 h-10 px-6 text-xs font-semibold text-brand-primary hover:bg-neutral-50 shadow-lg sm:mt-6 sm:h-11 sm:px-8 sm:text-sm bg-white"
+  >
+    Create Your Free Account →
+  </Button>
+</Link>
           </div>
         </div>
       </div>
