@@ -56,13 +56,17 @@ export function Hero() {
           </div>
 
           {/* Product image container */}
-          <div className="flex w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[422px] aspect-[422/400] items-center justify-center rounded-card overflow-hidden">
-            <Image
-              src="/images/home/Product-hero.png"
-              alt="Product thumbnail with Visibuy verified badge"
-              width={422}
-              height={400}
-              className="h-full w-full rounded-card object-cover"
+          <div className="flex w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[422px]
+                      h-[260px] sm:h-[300px] md:h-[360px] lg:h-[400px]
+                      items-center justify-center rounded-card overflow-hidden bg-black">
+            <video
+              src="/images/home/visibuy.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+              className="w-full h-full rounded-card object-contain"
             />
           </div>
         </div>
