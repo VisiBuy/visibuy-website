@@ -187,7 +187,7 @@ export function Testimonials() {
         <div className="mt-12 overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-r from-brand-success to-brand-primary shadow-xl">
           <div className="px-6 py-8 text-center sm:px-8 sm:py-10 md:py-12 lg:px-16">
             <h3 className="text-xl font-bold text-white sm:text-2xl md:text-3xl">
-              Join 10,000+ Verified Sellers
+                Join Hundreds of Verified Sellers
             </h3>
             <p className="mt-2 text-sm text-white/90 sm:text-base md:text-lg">
               Start building trust and closing more sales today
