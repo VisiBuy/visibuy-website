@@ -2,234 +2,245 @@ export default function TermsPage() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-4xl px-6 py-16 text-neutral-900">
-        <h1 className="text-3xl font-bold mb-2">Visibuy Terms &amp; Conditions</h1>
-        <p className="text-sm text-neutral-500 mb-8">
+        {/* ================= HEADER ================= */}
+        <h1 className="mb-2 text-3xl font-bold">
+          Visibuy Terms &amp; Conditions
+        </h1>
+
+        <p className="mb-8 text-sm text-neutral-500">
           Last Updated: 10th January, 2026
         </p>
 
-        <p className="mb-6">
-          These Terms &amp; Conditions (&quot;Terms&quot;) govern your access to and
-          use of the Visibuy platform, including all websites, applications,
-          dashboards, verification pages, APIs, and related services
-          (collectively, the &quot;Platform&quot;). By accessing or using
-          Visibuy, you agree to be bound by these Terms.
+        <p className="mb-6 leading-relaxed text-neutral-700">
+          These Terms &amp; Conditions (“Terms”) govern your access to and use
+          of the Visibuy platform, including websites, applications,
+          dashboards, verification pages, and related services (collectively,
+          the “Platform”).
         </p>
 
-        {/* 1 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">1. About Visibuy</h2>
-        <p className="mb-3">
-          Visibuy is a trust-enablement platform that provides tools designed to
-          help online sellers present visual information about products and
-          offer payment protection options through regulated third-party
-          providers.
+        <p className="mb-10 leading-relaxed text-neutral-700">
+          By accessing or using Visibuy, you agree to be bound by these Terms.
         </p>
-        <p>
+
+        {/* ================= 1 ================= */}
+        <SectionTitle title="1. About Visibuy" />
+
+        <p className="mb-4 leading-relaxed text-neutral-700">
+          Visibuy provides tools that help online sellers share visual proof of
+          products before buyers make payment decisions.
+        </p>
+
+        <p className="leading-relaxed text-neutral-700">
           Visibuy is not a marketplace and does not sell products. Visibuy does
-          not take ownership of, inspect, or physically handle any products
-          listed or verified on the Platform.
+          not take ownership of, inspect, physically handle, or deliver products
+          listed or recorded on the Platform.
         </p>
 
-        {/* 2 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">2. Eligibility</h2>
-        <p className="mb-3">
+        {/* ================= 2 ================= */}
+        <SectionTitle title="2. Eligibility" />
+
+        <p className="mb-4 leading-relaxed text-neutral-700">
           You must be at least 18 years old to create a seller account on
-          Visibuy. Buyers may access public verification pages without creating
-          an account.
-        </p>
-        <p>
-          By using the Platform, you represent that you have the legal capacity
-          to enter into a binding agreement under applicable Nigerian law.
+          Visibuy.
         </p>
 
-        {/* 3 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">3. Role of Visibuy</h2>
+        <p className="leading-relaxed text-neutral-700">
+          Buyers may access public verification pages without creating an
+          account.
+        </p>
 
-        <h3 className="font-semibold mt-4 mb-2">3.1 Platform-Only Role</h3>
-        <ul className="list-disc pl-6 space-y-1 mb-4">
+        {/* ================= 3 ================= */}
+        <SectionTitle title="3. Role of Visibuy" />
+
+        <ul className="list-disc space-y-2 pl-6 text-neutral-700">
           <li>Visibuy acts solely as a technology service provider.</li>
-          <li>Visibuy is not a party to transactions between buyers and sellers.</li>
-          <li>All sales contracts are formed directly between buyers and sellers.</li>
-          <li>Visibuy does not guarantee the completion of any transaction.</li>
+
+          <li>
+            Transactions occur directly between buyers and sellers.
+          </li>
+
+          <li>
+            Visibuy is not a party to sales agreements between users.
+          </li>
+
+          <li>
+            Visibuy does not guarantee the completion of transactions.
+          </li>
         </ul>
 
-        <h3 className="font-semibold mt-4 mb-2">3.2 No Product Guarantees</h3>
-        <p className="mb-2">Visibuy does not guarantee:</p>
-        <ul className="list-disc pl-6 space-y-1 mb-4">
-          <li>Product authenticity</li>
-          <li>Product condition or quality</li>
-          <li>Product legality</li>
-          <li>Seller performance or buyer payment behavior</li>
-        </ul>
-        <p>All purchasing decisions are made at the buyer’s discretion.</p>
+        {/* ================= 4 ================= */}
+        <SectionTitle title="4. Visual Verification Services" />
 
-        {/* 4 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">
-          4. Visual Verification Services
-        </h2>
-
-        <h3 className="font-semibold mt-4 mb-2">4.1 Nature of Verification</h3>
-        <p className="mb-3">
-          Visibuy enables sellers to upload images and videos (&quot;Visual
-          Proof&quot;) related to a product. This Visual Proof is displayed to
-          buyers via a unique, public URL.
-        </p>
-        <p className="mb-2">Visual verification:</p>
-        <ul className="list-disc pl-6 space-y-1 mb-4">
-          <li>Is informational in nature</li>
-          <li>Represents content submitted by the seller</li>
-          <li>Is not a certification or guarantee of authenticity</li>
-        </ul>
-
-        <h3 className="font-semibold mt-4 mb-2">
-          4.2 Automated &amp; AI-Assisted Checks
+        <h3 className="mb-2 mt-6 text-lg font-semibold">
+          4.1 Nature of Verification
         </h3>
-        <p className="mb-2">
-          Visibuy may apply automated or AI-assisted analysis to uploaded media
-          to detect indicators of manipulation or duplication.
-        </p>
-        <p className="mb-2">These checks:</p>
-        <ul className="list-disc pl-6 space-y-1 mb-4">
-          <li>Are probabilistic</li>
-          <li>May not detect all forms of manipulation or fraud</li>
-          <li>Do not constitute a final determination of authenticity</li>
-        </ul>
 
-        {/* 5 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">
-          5. Trust Scores &amp; Badges
-        </h2>
-        <p className="mb-2">
-          Trust Scores and badges are generated based on platform activity and
-          verification history.
+        <p className="mb-4 leading-relaxed text-neutral-700">
+          Visibuy enables sellers to record and share photos or videos related
+          to a product (“Visual Proof”).
         </p>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>Trust Scores are informational signals only</li>
-          <li>They are not endorsements, guarantees, or certifications</li>
+
+        <p className="mb-2 leading-relaxed text-neutral-700">
+          Visual verification:
+        </p>
+
+        <ul className="list-disc space-y-2 pl-6 text-neutral-700">
+          <li>Is informational in nature</li>
+
+          <li>Represents content provided by the seller</li>
+
           <li>
-            They should not be relied upon as the sole basis for a purchasing
-            decision
+            Is not a certification, endorsement, or guarantee of authenticity
           </li>
         </ul>
 
-        {/* 6 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">
-          6. Payments, Escrow &amp; Third-Party Providers
-        </h2>
+        <h3 className="mb-2 mt-8 text-lg font-semibold">
+          4.2 Automated Platform Checks
+        </h3>
 
-        <h3 className="font-semibold mt-4 mb-2">6.1 Payment Processing</h3>
-        <p className="mb-2">
-          Payment services, including escrow functionality, are provided by
-          regulated third-party payment providers, such as Flutterwave.
+        <p className="leading-relaxed text-neutral-700">
+          Visibuy may apply automated checks to recorded media to support
+          platform operations and improve verification experiences. These checks
+          may not detect all forms of misleading or manipulated content.
         </p>
-        <ul className="list-disc pl-6 space-y-1 mb-4">
+
+        {/* ================= 5 ================= */}
+        <SectionTitle title="5. Third-Party Payment Services" />
+
+        <p className="mb-4 leading-relaxed text-neutral-700">
+          Some sellers may choose to use third-party payment providers during
+          transactions.
+        </p>
+
+        <ul className="list-disc space-y-2 pl-6 text-neutral-700">
           <li>Visibuy does not hold customer funds</li>
-          <li>Visibuy does not operate as a bank or financial institution</li>
+
           <li>
-            Funds are processed and held in accordance with the payment
-            provider’s terms
+            Payment providers operate under their own terms and policies
+          </li>
+
+          <li>
+            Payment processing and fund handling are managed by those providers
           </li>
         </ul>
 
-        <h3 className="font-semibold mt-4 mb-2">6.2 Escrow Release Conditions</h3>
-        <p className="mb-2">Where escrow is enabled, funds may be released:</p>
-        <ul className="list-disc pl-6 space-y-1 mb-4">
-          <li>Upon buyer confirmation of receipt</li>
-          <li>Upon expiration of a defined confirmation period</li>
-          <li>
-            In accordance with payment provider rules during disputes
-          </li>
-        </ul>
+        {/* ================= 6 ================= */}
+        <SectionTitle title="6. Seller Responsibilities" />
 
-        {/* 7 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">7. Disputes</h2>
-        <p className="mb-2">
-          Visibuy may provide tools and processes to assist with dispute review.
+        <p className="mb-2 leading-relaxed text-neutral-700">
+          Sellers agree to:
         </p>
-        <ul className="list-disc pl-6 space-y-1 mb-4">
-          <li>Dispute resolution is evidence-based</li>
-          <li>Visibuy does not unilaterally adjudicate ownership or fault</li>
+
+        <ul className="list-disc space-y-2 pl-6 text-neutral-700">
+          <li>Record and share truthful product media</li>
+
           <li>
-            Final fund movements are subject to payment provider policies
+            Ensure recorded proof relates to the actual product being discussed
           </li>
-        </ul>
 
-        {/* 8 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">
-          8. Seller Responsibilities
-        </h2>
-        <p className="mb-2">Sellers agree to:</p>
-        <ul className="list-disc pl-6 space-y-1 mb-4">
-          <li>Upload accurate and truthful media</li>
-          <li>Own or have rights to the content submitted</li>
+          <li>
+            Communicate clearly with buyers regarding product details
+          </li>
+
           <li>Comply with applicable laws and platform rules</li>
-          <li>Fulfill orders as represented to buyers</li>
         </ul>
 
-        {/* 9 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">
-          9. Buyer Responsibilities
-        </h2>
-        <p className="mb-2">Buyers acknowledge that:</p>
-        <ul className="list-disc pl-6 space-y-1 mb-4">
+        {/* ================= 7 ================= */}
+        <SectionTitle title="7. Buyer Responsibilities" />
+
+        <p className="mb-2 leading-relaxed text-neutral-700">
+          Buyers acknowledge that:
+        </p>
+
+        <ul className="list-disc space-y-2 pl-6 text-neutral-700">
           <li>
             Visual verification assists decision-making but does not eliminate
-            risk
+            all transaction risk
           </li>
+
           <li>
-            They are responsible for reviewing provided information carefully
+            Buyers remain responsible for reviewing proof carefully before
+            payment
           </li>
-          <li>Transactions are conducted directly with sellers</li>
+
+          <li>
+            Transactions are conducted directly with sellers
+          </li>
         </ul>
 
-        {/* 10 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">
-          10. Intellectual Property
-        </h2>
-        <p className="mb-2">
-          All Visibuy platform software, branding, and proprietary systems
+        {/* ================= 8 ================= */}
+        <SectionTitle title="8. Disputes &amp; Platform Use" />
+
+        <p className="mb-4 leading-relaxed text-neutral-700">
+          Buyers and sellers should first attempt to resolve issues directly.
+        </p>
+
+        <p className="leading-relaxed text-neutral-700">
+          Visibuy may review reported verification content where appropriate and
+          reserves the right to restrict access for misuse of the Platform.
+        </p>
+
+        {/* ================= 9 ================= */}
+        <SectionTitle title="9. Intellectual Property" />
+
+        <p className="mb-4 leading-relaxed text-neutral-700">
+          All Visibuy software, branding, and proprietary platform systems
           remain the exclusive property of Visibuy.
         </p>
-        <p>
-          Users grant Visibuy a limited license to display uploaded content
-          solely for verification and platform operation purposes.
+
+        <p className="leading-relaxed text-neutral-700">
+          Users grant Visibuy a limited license to display recorded content for
+          verification and platform operation purposes.
         </p>
 
-        {/* 11 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">
-          11. Limitation of Liability
-        </h2>
-        <p className="mb-2">To the maximum extent permitted by law:</p>
-        <p>
-          Visibuy shall not be liable for transaction losses, product defects or
-          misrepresentation, missed deliveries, or indirect or consequential
-          damages.
+        {/* ================= 10 ================= */}
+        <SectionTitle title="10. Limitation of Liability" />
+
+        <p className="leading-relaxed text-neutral-700">
+          To the maximum extent permitted by law, Visibuy shall not be liable
+          for transaction losses, product defects, seller conduct, delivery
+          issues, or indirect damages arising from platform use.
         </p>
 
-        {/* 12 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">12. Termination</h2>
-        <p>
+        {/* ================= 11 ================= */}
+        <SectionTitle title="11. Termination" />
+
+        <p className="leading-relaxed text-neutral-700">
           Visibuy reserves the right to suspend or terminate access for
-          violations of these Terms or applicable laws.
+          violations of these Terms or misuse of the Platform.
         </p>
 
-        {/* 13 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">13. Governing Law</h2>
-        <p>
+        {/* ================= 12 ================= */}
+        <SectionTitle title="12. Governing Law" />
+
+        <p className="leading-relaxed text-neutral-700">
           These Terms are governed by the laws of the Federal Republic of
           Nigeria.
         </p>
 
-        {/* 14 */}
-        <h2 className="text-xl font-semibold mt-10 mb-3">14. Contact</h2>
-        <p className="mb-1">For legal inquiries:</p>
-        <p className="mb-1 font-medium">Visibuy Legal Team</p>
+        {/* ================= 13 ================= */}
+        <SectionTitle title="13. Contact" />
+
+        <p className="mb-2 leading-relaxed text-neutral-700">
+          For legal or platform-related inquiries:
+        </p>
+
         <a
           href="mailto:support@visibuy.com.ng"
-          className="text-blue-600 underline"
+          className="text-brand-primary underline"
         >
           support@visibuy.com.ng
         </a>
       </div>
     </section>
+  );
+}
+
+/* ================= SECTION TITLE ================= */
+function SectionTitle({ title }: { title: string }) {
+  return (
+    <h2 className="mb-3 mt-10 text-xl font-semibold text-neutral-900">
+      {title}
+    </h2>
   );
 }

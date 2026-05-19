@@ -1,175 +1,176 @@
 import Image from "next/image";
+import {
+  CalendarDays,
+  Link2,
+  UserRound,
+  Images,
+} from "lucide-react";
 
 export default function ReputationSection() {
   return (
-    <section className="w-full bg-sky-100">
-      <div className="mx-auto max-w-6xl px-5 py-14">
-        {/* Heading */}
-        <h2 className="text-center text-2xl font-bold text-neutral-900">
-          Your Reputation Made Visible
-        </h2>
-
-        <p className="mt-2 text-center text-sm text-neutral-700">
-          Your Trust Score shows buyers how reliable you are.
-        </p>
-
-        {/* Main layout */}
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-start">
-          {/* LEFT COLUMN */}
-          <div className="space-y-6">
-            {/* Explanation card */}
-            <div className="rounded-2xl bg-white px-5 py-6 text-sm text-neutral-700 shadow-sm">
-              <p className="font-semibold text-neutral-900">
-                The Trust Score is a dynamic 0–100 rating generated from:
-              </p>
-
-              <ul className="mt-4 space-y-3">
-                <li className="flex items-center gap-3">
-                  <Image
-                    src="/images/trust/verification-acc.png"
-                    alt="Verification accuracy"
-                    width={18}
-                    height={18}
-                  />
-                  <span>Verification Accuracy</span>
-                </li>
-
-                <li className="flex items-center gap-3">
-                  <Image
-                    src="/images/trust/completion.png"
-                    alt="Completion rate"
-                    width={18}
-                    height={18}
-                  />
-                  <span>Completion Rate</span>
-                </li>
-
-                <li className="flex items-center gap-3">
-                  <Image
-                    src="/images/trust/feedback.png"
-                    alt="Buyer feedback"
-                    width={18}
-                    height={18}
-                  />
-                  <span>Buyer Feedback</span>
-                </li>
-
-                <li className="flex items-center gap-3">
-                  <Image
-                    src="/images/trust/dispute.png"
-                    alt="Dispute history"
-                    width={18}
-                    height={18}
-                  />
-                  <span>Dispute History</span>
-                </li>
-              </ul>
-
-              {/* <p className="mt-4 text-xs text-neutral-600">
-                All sellers start at{" "}
-                <span className="font-medium text-yellow-600">
-                  40 (Bronze – New)
-                </span>{" "}
-                and grow through consistent, trustworthy activity.
-              </p> */}
-            </div>
-
-            {/* Badge Levels */}
-            <div>
-              <p className="mb-4 text-sm font-semibold text-neutral-900">
-                Badge Levels
-              </p>
-
-              <div className="flex flex-wrap items-center gap-4">
-                <Image
-                  src="/images/trust/badge-bronze.png"
-                  alt="Bronze badge"
-                  width={72}
-                  height={72}
-                  quality={100}
-                />
-                <Image
-                  src="/images/trust/badge-silver.png"
-                  alt="Silver badge"
-                  width={72}
-                  height={72}
-                  quality={100}
-                />
-                <Image
-                  src="/images/trust/badge-gold.png"
-                  alt="Gold badge"
-                  width={72}
-                  height={72}
-                  quality={100}
-                />
-                <Image
-                  src="/images/trust/badge-platinum.png"
-                  alt="Platinum badge"
-                  width={72}
-                  height={72}
-                  quality={100}
-                />
-              </div>
-            </div>
+    <section className="w-full bg-white py-16 md:py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
+        {/* ================= HEADER ================= */}
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2">
+            <span className="text-sm font-medium text-brand-primary">
+              Verification Transparency
+            </span>
           </div>
 
-          {/* RIGHT COLUMN – Trust Score Card */}
-          <div className="rounded-2xl bg-white px-5 py-6 shadow-sm">
-            {/* Avatar + name */}
-            <div className="flex flex-col items-center text-center">
+          <h2
+            className="
+              mt-5
+              text-3xl
+              font-heading
+              font-bold
+              leading-tight
+              tracking-tight
+              text-neutral-900
+              md:text-4xl
+            "
+          >
+            Buyers can review
+            <br />
+            important proof details.
+          </h2>
+
+          <p
+            className="
+              mx-auto
+              mt-5
+              max-w-2xl
+              text-base
+              leading-relaxed
+              text-neutral-600
+              md:text-lg
+            "
+          >
+            Verification pages help buyers inspect proof more clearly before
+            making a payment decision.
+          </p>
+        </div>
+
+        {/* ================= CONTENT ================= */}
+        <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:items-center">
+          {/* ================= LEFT SIDE ================= */}
+          <div className="space-y-6">
+            <FeatureCard
+              icon={
+                <CalendarDays className="h-6 w-6 text-brand-primary" />
+              }
+              title="Recording date and time"
+              description="Buyers can see when proof was recorded before payment."
+              bg="bg-blue-50"
+            />
+
+            <FeatureCard
+              icon={
+                <UserRound className="h-6 w-6 text-brand-success" />
+              }
+              title="Seller visibility"
+              description="Verification pages include seller-related proof context buyers can review."
+              bg="bg-green-50"
+            />
+
+            <FeatureCard
+              icon={
+                <Images className="h-6 w-6 text-orange-500" />
+              }
+              title="Product photos and videos"
+              description="Buyers can inspect the exact item through recorded proof media."
+              bg="bg-orange-50"
+            />
+
+            <FeatureCard
+              icon={
+                <Link2 className="h-6 w-6 text-purple-500" />
+              }
+              title="Shareable verification links"
+              description="Proof can be viewed directly through dedicated verification pages."
+              bg="bg-purple-50"
+            />
+          </div>
+
+          {/* ================= RIGHT SIDE ================= */}
+          <div className="flex justify-center lg:justify-end">
+            <div
+              className="
+                overflow-hidden
+                rounded-[32px]
+                border
+                border-black/5
+                bg-white
+                shadow-[0_25px_90px_rgba(0,0,0,0.08)]
+              "
+            >
               <Image
-                src="/images/trust/avatar.png"
-                alt="Seller avatar"
-                width={56}
-                height={56}
-                className="rounded-full"
+                src="/images/trust/verification-details-preview.png"
+                alt="Verification page showing visible proof details"
+                width={1600}
+                height={1400}
+                className="w-full max-w-[640px] object-cover"
               />
-
-              <p className="mt-2 text-sm font-semibold text-neutral-900">
-                Aishat Abodunrin
-              </p>
-              <p className="text-xs text-neutral-500">
-                @aishat.abodunrin
-              </p>
-            </div>
-
-            {/* Trust score */}
-            <div className="mt-5 flex items-center justify-between text-sm">
-              <span className="text-neutral-700">Trust Score</span>
-              <span className="font-semibold text-neutral-900">
-                80/100
-              </span>
-            </div>
-
-            {/* Progress bar */}
-            <div className="mt-2 h-2 w-full rounded-full bg-neutral-200">
-              <div className="h-2 w-[80%] rounded-full bg-gradient-to-r from-sky-500 via-emerald-500 to-green-500" />
-            </div>
-
-            {/* Metrics */}
-            <div className="mt-4 space-y-2 text-sm text-neutral-700">
-              <div className="flex justify-between">
-                <span>• Verification Accuracy</span>
-                <span className="font-medium">98%</span>
-              </div>
-              <div className="flex justify-between">
-                <span>• Completion Rate</span>
-                <span className="font-medium">94%</span>
-              </div>
-              <div className="flex justify-between">
-                <span>• Buyer Feedback</span>
-                <span className="font-medium">4.5/5</span>
-              </div>
-              <div className="flex justify-between">
-                <span>• Dispute History</span>
-                <span className="font-medium text-emerald-600">
-                  Active
-                </span>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+/* ================= FEATURE CARD ================= */
+function FeatureCard({
+  icon,
+  title,
+  description,
+  bg,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  bg: string;
+}) {
+  return (
+    <div
+      className="
+        flex
+        items-start
+        gap-4
+        rounded-[28px]
+        border
+        border-black/5
+        bg-white
+        p-5
+        shadow-[0_12px_40px_rgba(0,0,0,0.04)]
+      "
+    >
+      {/* ICON */}
+      <div
+        className={`
+          flex
+          h-12
+          w-12
+          shrink-0
+          items-center
+          justify-center
+          rounded-2xl
+          ${bg}
+        `}
+      >
+        {icon}
+      </div>
+
+      {/* CONTENT */}
+      <div>
+        <h3 className="text-lg font-semibold text-neutral-900">
+          {title}
+        </h3>
+
+        <p className="mt-2 text-sm leading-relaxed text-neutral-600 md:text-base">
+          {description}
+        </p>
+      </div>
+    </div>
   );
 }
