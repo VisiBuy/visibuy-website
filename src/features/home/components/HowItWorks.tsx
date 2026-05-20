@@ -338,7 +338,7 @@ export function HowItWorks() {
                     </div>
                   ) : (
                     <Image
-                      src={step.image}
+                      src={step.image!}
                       alt={step.title}
                       width={900}
                       height={700}

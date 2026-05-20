@@ -15,8 +15,8 @@ export default function HomePage() {
       <HomeHero />
       <HowItWorksSteps />
       <EarnTrustAsYouSell />
-      <VisualVerificationEngine />
-      <WhatAIDetects />
+      {/* <VisualVerificationEngine />
+      <WhatAIDetects /> */}
       <SimpleCreditBilling />
       <CTASection />
       {/* <Footer /> */}
