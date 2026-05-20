@@ -3,105 +3,290 @@ import Image from "next/image";
 export default function VisualVerificationWithHowItWorks() {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto max-w-7xl px-5 py-16 text-neutral-900">
-        {/* ================= VISUAL VERIFICATION ================= */}
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          {/* TEXT */}
-          <div>
-            <h2 className="text-2xl font-extrabold leading-tight md:text-3xl">
-              Visual Verification,{" "}
-              <span className="text-blue-600">Powered by AI</span>
-            </h2>
-
-            <p className="mt-2 text-sm font-medium text-neutral-700">
-              Not just photos. Verified proof.
-            </p>
-
-            <p className="mt-4  max-w-xl text-lg leading-relaxed text-neutral-600">
-              At the core of Visibuy is the Visual Verification Engine (VVE) — an
-              AI-powered system that analyzes uploaded photos or videos, secures
-              them with timestamps and seller identity, and checks for reuse,
-              manipulation, or fake content.
-              <br />
-              <br />
-              This ensures buyers are seeing authentic, original proof tied to
-              the seller — not recycled internet images.
-            </p>
+      <div className="mx-auto max-w-7xl px-5 py-16 text-neutral-900 md:py-20 lg:py-24">
+        {/* TOP INTRO */}
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2">
+            <span className="text-sm font-medium text-brand-primary">
+              How Visibuy Works
+            </span>
           </div>
 
-          {/* CUBE IMAGE */}
-          <div className="flex justify-center lg:justify-end">
-            <Image
-              src="/images/about/vve-cube.png"
-              alt=""
-              width={420}
-              height={340}
-              className="w-full max-w-[420px]"
-            />
-          </div>
+          <h2
+            className="
+              mt-5
+              text-3xl
+              font-heading
+              font-bold
+              leading-tight
+              tracking-tight
+              text-neutral-900
+              md:text-5xl
+            "
+          >
+            Proving the exact
+            <br />
+            item is simple.
+          </h2>
+
+          <p
+            className="
+              mx-auto
+              mt-5
+              max-w-2xl
+              text-base
+              leading-relaxed
+              text-neutral-600
+              md:text-lg
+            "
+          >
+            Record the product, share your verification link, and let buyers
+            view proof before payment.
+          </p>
         </div>
 
-        {/* ================= HOW VVE WORKS ================= */}
-        <div className="mt-20">
-          <h3 className="text-center text-xl font-bold text-blue-600">
-            How VVE Works
-          </h3>
-
-          {/* STEPS */}
-          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-6 lg:gap-10">
-            {/* STEP 1 */}
-            <div className="flex h-[220px] flex-col items-center justify-center rounded-xl bg-white text-center shadow-[0_8px_30px_rgba(0,123,255,0.12)]">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-blue-50">
-                <Image
-                  src="/images/about/icon-upload.png"
-                  alt=""
-                  width={22}
-                  height={22}
-                />
+        {/* STEPS */}
+        <div className="mt-16 space-y-20">
+          {/* ================= STEP 1 ================= */}
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            {/* TEXT */}
+            <div>
+              <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2">
+                <span className="text-sm font-medium text-brand-primary">
+                  Step 1
+                </span>
               </div>
 
-              <h4 className="text-base font-bold text-neutral-900">Upload</h4>
-              <p className="mt-1.5 max-w-[240px] text-sm text-neutral-600">
-                Seller uploads photo or video
+              <h3
+                className="
+                  mt-5
+                  text-3xl
+                  font-heading
+                  font-bold
+                  leading-tight
+                  tracking-tight
+                  text-neutral-900
+                  md:text-4xl
+                "
+              >
+                Record the
+                <br />
+                exact item.
+              </h3>
+
+              <p className="mt-5 text-base leading-relaxed text-neutral-600">
+                Use your phone to record a short video or take photos of the
+                exact product you’re selling before payment.
               </p>
+
+              <div className="mt-8 space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-primary" />
+
+                  <p className="text-sm text-neutral-700 md:text-base">
+                    Live camera recording flow
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-success" />
+
+                  <p className="text-sm text-neutral-700 md:text-base">
+                    Show the real product clearly
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-orange-400" />
+
+                  <p className="text-sm text-neutral-700 md:text-base">
+                    Capture proof before payment
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* STEP 2 */}
-            <div className="flex h-[220px] flex-col items-center justify-center rounded-xl bg-white text-center shadow-[0_8px_30px_rgba(40,167,69,0.14)]">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-green-50">
-                <Image
-                  src="/images/about/icon-ai.png"
-                  alt=""
-                  width={22}
-                  height={22}
-                />
-              </div>
+            {/* IMAGE */}
+            <div
+              className="
+                overflow-hidden
+                rounded-[32px]
+                border
+                border-black/5
+                bg-white
+                shadow-[0_20px_80px_rgba(0,0,0,0.08)]
+              "
+            >
+              <Image
+                src="/images/about/how-it-works-step-1.png"
+                alt="Seller recording the exact item with live camera proof"
+                width={1600}
+                height={1000}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
 
-              <h4 className="text-base font-bold text-neutral-900">
-                AI Verification
-              </h4>
-              <p className="mt-1.5 max-w-[240px] text-sm text-neutral-600">
-                AI analyzes originality and authenticity
-              </p>
+          {/* ================= STEP 2 ================= */}
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            {/* IMAGE */}
+            <div
+              className="
+                order-2
+                overflow-hidden
+                rounded-[32px]
+                border
+                border-black/5
+                bg-white
+                shadow-[0_20px_80px_rgba(0,0,0,0.08)]
+                lg:order-1
+              "
+            >
+              <Image
+                src="/images/about/how-it-works-step-2.png"
+                alt="Seller sharing Visibuy verification link"
+                width={1600}
+                height={1000}
+                className="w-full h-auto object-cover"
+              />
             </div>
 
-            {/* STEP 3 */}
-            <div className="flex h-[220px] flex-col items-center justify-center rounded-xl bg-white text-center shadow-[0_8px_30px_rgba(0,123,255,0.12)]">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-blue-50">
-                <Image
-                  src="/images/about/icon-verified.png"
-                  alt=""
-                  width={22}
-                  height={22}
-                />
+            {/* TEXT */}
+            <div className="order-1 lg:order-2">
+              <div className="inline-flex items-center rounded-full border border-green-100 bg-green-50 px-4 py-2">
+                <span className="text-sm font-medium text-brand-success">
+                  Step 2
+                </span>
               </div>
 
-              <h4 className="text-base font-bold text-neutral-900">
-                Verified Proof
-              </h4>
-              <p className="mt-1.5 max-w-[240px] text-sm text-neutral-600">
-                Tamper-proof verification issued
+              <h3
+                className="
+                  mt-5
+                  text-3xl
+                  font-heading
+                  font-bold
+                  leading-tight
+                  tracking-tight
+                  text-neutral-900
+                  md:text-4xl
+                "
+              >
+                Share your
+                <br />
+                verification link.
+              </h3>
+
+              <p className="mt-5 text-base leading-relaxed text-neutral-600">
+                Every proof gets its own Visibuy link that you can instantly
+                share on WhatsApp, Instagram, Jiji, or anywhere buyers already
+                shop.
               </p>
+
+              <div className="mt-8 space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-primary" />
+
+                  <p className="text-sm text-neutral-700 md:text-base">
+                    One proof, one shareable link
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-success" />
+
+                  <p className="text-sm text-neutral-700 md:text-base">
+                    Works across social commerce platforms
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-orange-400" />
+
+                  <p className="text-sm text-neutral-700 md:text-base">
+                    Simple for buyers to open and view
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ================= STEP 3 ================= */}
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+            {/* TEXT */}
+            <div>
+              <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2">
+                <span className="text-sm font-medium text-brand-primary">
+                  Step 3
+                </span>
+              </div>
+
+              <h3
+                className="
+                  mt-5
+                  text-3xl
+                  font-heading
+                  font-bold
+                  leading-tight
+                  tracking-tight
+                  text-neutral-900
+                  md:text-4xl
+                "
+              >
+                Buyers view proof
+                <br />
+                before payment.
+              </h3>
+
+              <p className="mt-5 text-base leading-relaxed text-neutral-600">
+                Buyers can watch the proof, inspect the exact product, and feel
+                more confident about what they’re paying for.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-primary" />
+
+                  <p className="text-sm text-neutral-700 md:text-base">
+                    See the exact item clearly
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-success" />
+
+                  <p className="text-sm text-neutral-700 md:text-base">
+                    Reduce hesitation before payment
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-orange-400" />
+
+                  <p className="text-sm text-neutral-700 md:text-base">
+                    Help conversations move faster
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* IMAGE */}
+            <div
+              className="
+                overflow-hidden
+                rounded-[32px]
+                border
+                border-black/5
+                bg-white
+                shadow-[0_20px_80px_rgba(0,0,0,0.08)]
+              "
+            >
+              <Image
+                src="/images/about/how-it-works-step-3.png"
+                alt="Buyer viewing product proof before payment"
+                width={1600}
+                height={1000}
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>

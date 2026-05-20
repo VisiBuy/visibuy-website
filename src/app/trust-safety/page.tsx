@@ -20,9 +20,9 @@ export default function TrustSafetyPage() {
       <BuiltForTrustSection />
       <ReputationSection />
       <AiPoweredVerificationSection />
-      <TrustBadgesSection />
+      {/* <TrustBadgesSection /> */}
       <ResolutionAndRulesSection/>
-      <DataPrivacySecuritySection />
+      {/* <DataPrivacySecuritySection /> */}
       <TrustMakesSellingSection />
     </main>
   );
