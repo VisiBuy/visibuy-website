@@ -1,82 +1,196 @@
-import Image from "next/image";
+import {
+  Camera,
+  Clock3,
+  Eye,
+} from "lucide-react";
 
 export default function BuiltForTrustSection() {
   return (
-    <section className="w-full bg-white">
-      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 lg:px-16">
-        {/* Heading */}
-        <h2 className="text-center text-2xl font-bold text-neutral-900 md:text-3xl lg:text-4xl">
-          Built For Trust From Day One
-        </h2>
-
-        {/* Subtext */}
-        <p className="mt-2 text-center text-sm text-neutral-600 md:text-base">
-          Everything on Visibuy is designed to protect both sides.
-        </p>
-
-        {/* Cards - Three column layout on tablet/desktop */}
-        <div className="mt-10 space-y-6 md:mt-12 md:grid md:grid-cols-3 md:gap-6 md:space-y-0 lg:gap-8">
-          {/* Card 1 */}
-          <div className="rounded-2xl bg-emerald-50 px-6 py-9 text-center md:px-5 lg:px-8 lg:py-10">
-            <Image
-              src="/images/trust/verify.png"
-              alt="AI-powered visual verification"
-              width={44}
-              height={44}
-              className="mx-auto mb-3"
-            />
-
-            <h3 className="text-lg font-bold text-neutral-900 lg:text-xl">
-              AI-Powered Visual<br />Verification
-            </h3>
-
-            <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
-              Ensure that the product is real, recent, and truly in the seller's
-              possession.
-            </p>
+    <section className="w-full bg-neutral-100 py-16 md:py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
+        {/* ================= HEADER ================= */}
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2">
+            <span className="text-sm font-medium text-brand-primary">
+              Built Around Clear Proof
+            </span>
           </div>
 
-          {/* Card 2 */}
-          <div className="rounded-2xl bg-sky-50 px-6 py-9 text-center md:px-5 lg:px-8 lg:py-10">
-            <Image
-              src="/images/trust/shield.png"
-              alt="Protected payments"
-              width={44}
-              height={44}
-              className="mx-auto mb-3"
-            />
+          <h2
+            className="
+              mt-5
+              text-3xl
+              font-heading
+              font-bold
+              leading-tight
+              tracking-tight
+              text-neutral-900
+              md:text-4xl
+            "
+          >
+            Buyers can inspect
+            <br />
+            products more clearly.
+          </h2>
 
-            <h3 className="text-lg font-bold text-neutral-900 lg:text-xl">
-              Protected Payments
-            </h3>
+          <p
+            className="
+              mx-auto
+              mt-5
+              max-w-2xl
+              text-base
+              leading-relaxed
+              text-neutral-600
+              md:text-lg
+            "
+          >
+            Visibuy helps reduce uncertainty before payment by making product
+            proof more visible and easier to inspect.
+          </p>
+        </div>
 
-            <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
-              Buyers' money is only released when the item matches the proof and
-              delivery is confirmed.
-            </p>
-          </div>
+        {/* ================= CARDS ================= */}
+        <div className="mt-14 grid gap-6 md:grid-cols-3 lg:gap-8">
+          {/* ================= CARD 1 ================= */}
+          <Card
+            icon={
+              <Camera className="h-7 w-7 text-brand-primary" />
+            }
+            badge="Record Proof"
+            title="Record the exact item."
+            description="Sellers can record photos or videos of the actual product before payment."
+            points={[
+              "Capture the real product clearly",
+              "Record directly from mobile device",
+              "Show proof before payment",
+            ]}
+            bg="bg-blue-50"
+          />
 
-          {/* Card 3 */}
-          <div className="rounded-2xl bg-amber-50 px-6 py-9 text-center md:px-5 lg:px-8 lg:py-10">
-            <Image
-              src="/images/trust/star.png"
-              alt="Seller trust score"
-              width={44}
-              height={44}
-              className="mx-auto mb-3"
-            />
+          {/* ================= CARD 2 ================= */}
+          <Card
+            icon={
+              <Clock3 className="h-7 w-7 text-brand-success" />
+            }
+            badge="Verification Details"
+            title="Important details stay visible."
+            description="Verification pages include helpful product proof details buyers can review."
+            points={[
+              "Timestamp information",
+              "Seller context and proof details",
+              "Shareable verification links",
+            ]}
+            bg="bg-green-50"
+          />
 
-            <h3 className="text-lg font-bold text-neutral-900 lg:text-xl">
-              Seller's Trust Score
-            </h3>
-
-            <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
-              A real-time score that grows with accuracy, successful transactions,
-              and buyer feedback.
-            </p>
-          </div>
+          {/* ================= CARD 3 ================= */}
+          <Card
+            icon={
+              <Eye className="h-7 w-7 text-orange-500" />
+            }
+            badge="Inspect Before Payment"
+            title="Buyers inspect proof directly."
+            description="Instead of relying only on listings, buyers can review proof themselves."
+            points={[
+              "Inspect the exact item clearly",
+              "Ask fewer repetitive questions",
+              "Make more confident decisions",
+            ]}
+            bg="bg-orange-50"
+          />
         </div>
       </div>
     </section>
+  );
+}
+
+/* ================= CARD ================= */
+function Card({
+  icon,
+  badge,
+  title,
+  description,
+  points,
+  bg,
+}: {
+  icon: React.ReactNode;
+  badge: string;
+  title: string;
+  description: string;
+  points: string[];
+  bg: string;
+}) {
+  return (
+    <div
+      className="
+        rounded-[32px]
+        border
+        border-black/5
+        bg-white
+        p-7
+        shadow-[0_16px_50px_rgba(0,0,0,0.05)]
+        md:p-8
+      "
+    >
+      {/* ICON */}
+      <div
+        className={`
+          inline-flex
+          h-14
+          w-14
+          items-center
+          justify-center
+          rounded-2xl
+          ${bg}
+        `}
+      >
+        {icon}
+      </div>
+
+      {/* BADGE */}
+      <div className="mt-6">
+        <div className="inline-flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-4 py-2">
+          <span className="text-sm font-medium text-neutral-700">
+            {badge}
+          </span>
+        </div>
+      </div>
+
+      {/* TITLE */}
+      <h3
+        className="
+          mt-5
+          text-2xl
+          font-heading
+          font-bold
+          leading-tight
+          tracking-tight
+          text-neutral-900
+        "
+      >
+        {title}
+      </h3>
+
+      {/* DESCRIPTION */}
+      <p className="mt-5 text-base leading-relaxed text-neutral-600">
+        {description}
+      </p>
+
+      {/* POINTS */}
+      <div className="mt-8 space-y-4">
+        {points.map((point) => (
+          <div
+            key={point}
+            className="flex items-start gap-3"
+          >
+            <div className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-primary" />
+
+            <p className="text-sm leading-relaxed text-neutral-700 md:text-base">
+              {point}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

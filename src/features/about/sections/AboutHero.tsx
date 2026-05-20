@@ -1,138 +1,139 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import { Button } from "@/shared/components/ui/button";
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-r from-[#CBE2FF] via-white to-[#E2FCE2]">
-      {/* ================= BACKGROUND ICONS ================= */}
+    <section className="relative overflow-hidden bg-neutral-100 py-14 sm:py-20 lg:py-28">
+      {/* Background glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.08),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.08),transparent_35%)]" />
 
-      {/* Top icons */}
-      <Image
-        src="/images/about/icon-lock.png"
-        alt=""
-        width={30}
-        height={30}
-        className="pointer-events-none absolute left-6 top-6 opacity-60 md:left-16 md:top-12 lg:left-24"
-      />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-5 md:px-6 lg:px-8">
+        {/* TOP CONTENT */}
+        <div className="mx-auto max-w-4xl text-center">
+          {/* Label */}
+          <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2">
+            <span className="text-sm font-medium text-brand-primary">
+              Why Visibuy Exists
+            </span>
+          </div>
 
-      <Image
-        src="/images/about/icon-check.png"
-        alt=""
-        width={30}
-        height={30}
-        className="pointer-events-none absolute right-6 top-6 opacity-55 md:right-16 md:top-12 lg:right-24"
-      />
+          {/* Heading */}
+          <h1
+            className="
+              mt-6
+              font-heading
+              text-4xl
+              font-bold
+              leading-[1.05]
+              tracking-tight
+              text-neutral-900
+              sm:text-5xl
+              lg:text-6xl
+            "
+          >
+            Buyers hesitate when
+            <br />
+            they can’t verify the
+            <br />
+            exact item.
+          </h1>
 
-      {/* Middle icons */}
-      <Image
-        src="/images/about/icon-finger.png"
-        alt=""
-        width={32}
-        height={32}
-        className="pointer-events-none absolute left-6 top-[260px] opacity-55 md:left-20 md:top-[340px] lg:left-32"
-      />
+          {/* Description */}
+          <p
+            className="
+              mx-auto
+              mt-6
+              max-w-3xl
+              text-base
+              leading-relaxed
+              text-neutral-600
+              sm:text-lg
+            "
+          >
+            Visibuy was built to help sellers prove the exact product before
+            payment, so buyers can feel more confident about what they’re paying
+            for.
+          </p>
 
-      <Image
-        src="/images/about/icon-document.png"
-        alt=""
-        width={32}
-        height={32}
-        className="pointer-events-none absolute right-6 top-[300px] opacity-55 md:right-20 md:top-[360px] lg:right-32"
-      />
+          {/* CTA */}
+          <div
+            className="
+              mt-8
+              flex
+              flex-col
+              gap-3
+              sm:flex-row
+              sm:justify-center
+            "
+          >
+            <Link
+              href="https://app.visibuy.com.ng/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <Button
+                className="
+                  w-full
+                  sm:w-auto
+                  px-8
+                  py-6
+                  text-base
+                  font-semibold
+                "
+              >
+                Create Your First Verification →
+              </Button>
+            </Link>
 
-      {/* Bottom icons */}
-      <Image
-        src="/images/about/icon-shield.png"
-        alt=""
-        width={30}
-        height={30}
-        className="pointer-events-none absolute left-6 bottom-[140px] opacity-10 md:left-24 lg:left-40"
-      />
-
-      <Image
-        src="/images/about/icon-verify.png"
-        alt=""
-        width={30}
-        height={30}
-        className="pointer-events-none absolute right-6 bottom-[120px] opacity-10 md:right-24 lg:right-40"
-      />
-
-      {/* ================= CONTENT ================= */}
-      <div className="relative mx-auto max-w-xl px-5 py-14 text-neutral-900 md:max-w-3xl md:py-20 lg:max-w-6xl lg:py-28">
-        {/* Badge */}
-        <div className="mb-4 flex justify-center md:mb-6">
-          <span className="rounded-full bg-blue-200 px-4 py-1 text-xs font-semibold text-blue-600 md:px-5 md:py-1.5 md:text-sm">
-            Built to Restore Trust in Online Selling
-          </span>
-        </div>
-
-        {/* Headline */}
-        <h1 className="text-center text-2xl font-extrabold leading-tight md:text-4xl md:leading-tight lg:text-5xl">
-          Online selling works
-          <br />
-          better when trust
-          <br />
-          comes first
-        </h1>
-
-        {/* Subtext */}
-        <p className="mx-auto mt-4 max-w-sm text-center text-sm font-medium text-neutral-600 md:mt-6 md:max-w-xl md:text-base lg:max-w-2xl lg:text-lg">
-          Visibuy was built to help honest sellers prove what they sell, help
-          buyers trust what they see and make online commerce safer for everyone.
-        </p>
-
-        {/* Hero image */}
-        <div className="relative mt-12 flex justify-center md:mt-16 lg:mt-20">
-          <div className="relative h-[190px] w-[190px] md:h-[260px] md:w-[260px] lg:h-[320px] lg:w-[320px]">
-            <Image
-              src="/images/about/hero-person.png"
-              alt=""
-              fill
-              className="rounded-full object-cover object-top"
-            />
-
-            {/* Left badge */}
-            <div className="absolute -left-16 top-6 rounded-lg bg-white px-3 py-2 shadow-md md:-left-24 md:top-10 md:px-4 md:py-3">
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/images/about/ai-badge.png"
-                  alt=""
-                  width={18}
-                  height={18}
-                />
-                <p className="text-[10px] font-semibold leading-tight text-neutral-700 md:text-xs">
-                  AI Powered Visual
-                  <br />
-                  Verification
-                </p>
-              </div>
-            </div>
-
-            {/* Right badge */}
-            <div className="absolute -right-16 bottom-6 rounded-lg bg-white px-3 py-2 shadow-md md:-right-24 md:bottom-10 md:px-4 md:py-3">
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/images/about/protected-payment.png"
-                  alt=""
-                  width={18}
-                  height={18}
-                />
-                <p className="text-[10px] font-semibold text-green-600 md:text-xs">
-                  Protected Payment
-                </p>
-              </div>
-            </div>
+            <Link
+              href="/how-its-works"
+              className="w-full sm:w-auto"
+            >
+              <Button
+                variant="secondary"
+                className="
+                  w-full
+                  sm:w-auto
+                  px-8
+                  py-6
+                  text-base
+                  font-semibold
+                "
+              >
+                See How Visibuy Works
+              </Button>
+            </Link>
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="mt-12 flex flex-col items-center gap-4 md:mt-16 md:flex-row md:justify-center">
-          <button className="w-full max-w-[220px] rounded-xl bg-blue-600 py-3 text-sm font-bold text-white shadow-md transition hover:bg-blue-700 md:max-w-[240px] md:text-base">
-            Get Started For Free
-          </button>
-
-          <button className="w-full max-w-[220px] rounded-xl border border-blue-200 bg-white py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-50 md:max-w-[240px] md:text-base">
-            See how visibuy works
-          </button>
+        {/* HERO IMAGE */}
+        <div className="mt-14 flex justify-center sm:mt-16 lg:mt-20">
+          <div
+            className="
+              relative
+              w-full
+              max-w-6xl
+              overflow-hidden
+              rounded-[32px]
+              border
+              border-black/5
+              bg-white
+              shadow-[0_20px_80px_rgba(0,0,0,0.08)]
+            "
+          >
+            <Image
+              src="/images/about/about-hero-proof.png"
+              alt="Seller proving the exact product before payment"
+              width={1600}
+              height={1100}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

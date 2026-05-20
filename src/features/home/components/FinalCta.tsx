@@ -1,52 +1,123 @@
-
 import { Button } from "@/shared/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0EA5E9] via-[#3B82F6] to-[#10B981] py-12 sm:py-16 md:py-20 lg:py-24 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15)_0%,transparent_40%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.1)_0%,transparent_40%)]" />
+    <section className="relative overflow-hidden bg-neutral-950 py-16 sm:py-20 md:py-24 lg:py-32">
+      {/* Background glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.12),transparent_40%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.10),transparent_35%)]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-5 md:px-6 lg:px-8">
-        {/* Main Content */}
-        <div className="text-center">
-          <h2 className="text-2xl font-heading font-bold leading-tight tracking-tight sm:text-2xl md:text-3xl lg:text-4xl px-4">
-            Honest Sellers Deserve More Sales.
-          </h2>
-          <p className="mt-2 text-sm font-medium sm:text-base md:text-lg lg:text-xl px-4">
-            VisiBuy helps you prove it, protect it, and grow it.
-          </p>
+        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
+          {/* LEFT CONTENT */}
+          <div className="max-w-2xl">
+            {/* Badge */}
+            <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-sm">
+              <span className="text-sm font-medium text-neutral-200">
+                Trusted social-commerce verification
+              </span>
+            </div>
 
-          {/* Image + Overlay Badge */}
-          <div className="relative mx-auto mt-8 sm:mt-10 md:mt-12 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl px-4">
-            <div className="overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
+            {/* Heading */}
+            <h2 className="mt-6 text-4xl font-heading font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Start Proving Products
+              <br />
+              Before Payment
+            </h2>
+
+            {/* Description */}
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-neutral-300 sm:text-lg">
+              Create your first verification link and help buyers feel more
+              confident before they pay.
+            </p>
+
+            {/* Benefits */}
+            <div className="mt-8 space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="h-2.5 w-2.5 rounded-full bg-brand-primary" />
+
+                <p className="text-sm text-neutral-200 sm:text-base">
+                  Prove the exact product
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="h-2.5 w-2.5 rounded-full bg-brand-success" />
+
+                <p className="text-sm text-neutral-200 sm:text-base">
+                  Share verification links anywhere
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="h-2.5 w-2.5 rounded-full bg-orange-400" />
+
+                <p className="text-sm text-neutral-200 sm:text-base">
+                  Help buyers feel more confident
+                </p>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-10">
+              <Link
+                href="https://app.visibuy.com.ng/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  className="
+                    h-12
+                    rounded-full
+                    bg-white
+                    px-8
+                    text-sm
+                    font-semibold
+                    text-neutral-950
+                    shadow-[0_10px_40px_rgba(255,255,255,0.12)]
+                    hover:bg-neutral-100
+                    sm:h-14
+                    sm:px-10
+                    sm:text-base
+                  "
+                >
+                  Create Your First Verification →
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="relative">
+            {/* Glow */}
+            <div className="absolute inset-0 rounded-[36px] bg-gradient-to-br from-brand-primary/20 to-brand-success/10 blur-3xl" />
+
+            {/* Image container */}
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[32px]
+                border
+                border-white/10
+                bg-white/5
+                shadow-[0_30px_100px_rgba(0,0,0,0.45)]
+                backdrop-blur-sm
+              "
+            >
               <Image
-                src="/images/home/finalcta.png"
-                alt="Happy seller checking verification on phone"
-                width={600}
-                height={700}
-                className="w-full object-cover"
+                src="/images/home/final-cta-proof.png"
+                alt="Seller proving the exact product before payment"
+                width={1400}
+                height={1200}
+                className="w-full h-auto object-cover"
                 priority
               />
             </div>
           </div>
-
-          {/* CTA Button */}
-          <Link
-  href="https://app.visibuy.com.ng/signup"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button
-    size="lg"
-    className="mt-8 h-10 rounded-full bg-brand-primary px-6 text-xs font-semibold text-white shadow-xl hover:bg-white hover:text-brand-primary hover:shadow-2xl transition-all sm:mt-10 sm:h-11 sm:px-8 sm:text-sm md:mt-12 md:h-12 md:px-10 md:text-base lg:px-12"
-  >
-    Get Started For Free →
-  </Button>
-</Link>
         </div>
       </div>
     </section>
