@@ -1,90 +1,96 @@
 "use client";
 
-import { PiStarFill } from "react-icons/pi";
-
-const badges = [
-  {
-    title: "Bronze",
-    subtitle: "5+ Verifications",
-    outer: "bg-[#DD8231]",
-    inner: "bg-[#C25D18]",
-    star: "text-[#FAAB49]",
-    text: "text-[#C25D18]",
-  },
-  {
-    title: "Silver",
-    subtitle: "25+ Verifications",
-    outer: "bg-[#A3B3C0]",
-    inner: "bg-[#788B9C]",
-    star: "text-[#E2E8ED]",
-    text: "text-[#788B9C]",
-  },
-  {
-    title: "Gold",
-    subtitle: "100+ Verifications",
-    outer: "bg-[#F9AE26]",
-    inner: "bg-[#E58B0E]",
-    star: "text-[#FFEB99]",
-    text: "text-[#E58B0E]",
-  },
-];
+import Image from "next/image";
 
 export default function EarnTrustAsYouSell() {
   return (
-    <section className="py-28 bg-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        {/* Heading */}
-        <h2 className="text-5xl font-bold text-black mb-3">
-          Earn <span className="text-blue-500">Trust</span> as You Sell.
-        </h2>
+    <section className="relative overflow-hidden bg-white py-16 md:py-20 lg:py-24">
+      {/* SOFT BACKGROUND GLOW */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,123,255,0.06)_0%,transparent_35%)]" />
 
-        <p className="text-gray-500 text-sm max-w-xl mx-auto mb-16">
-          Every successful verification and delivery increases your Trust Score
-          and badge level.
-        </p>
+      <div className="relative mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
+        {/* ================= HEADER ================= */}
+        <div className="mx-auto max-w-3xl text-center">
+          {/* LABEL */}
+          <div className="inline-flex items-center rounded-full border border-green-100 bg-green-50 px-4 py-2">
+            <span className="text-sm font-medium text-brand-success">
+              Clearer Online Selling
+            </span>
+          </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {badges.map((badge, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 rounded-2xl py-8 px-6 flex flex-col items-center shadow-sm"
-            >
-              {/* Coin Badge */}
-              <div
-                className={`
-                  group
-                  w-24 h-24 rounded-full flex items-center justify-center
-                  ${badge.outer}
-                  shadow-[0_6px_14px_rgba(0,0,0,0.18)]
-                `}
-              >
-                <div
-                  className={`
-                    w-16 h-16 rounded-full flex items-center justify-center
-                    ${badge.inner}
-                    shadow-inner
-                  `}
-                >
-                  <PiStarFill
-                    className={`text-5xl ${badge.star} transition-transform duration-300 ease-out group-hover:scale-110`}
-                  />
-                </div>
-              </div>
+          {/* HEADING */}
+          <h2
+            className="
+              mt-6
+              text-3xl
+              font-heading
+              font-bold
+              leading-tight
+              tracking-tight
+              text-neutral-900
+              md:text-5xl
+            "
+          >
+            Clear proof builds
+            <br />
+            buyer confidence.
+          </h2>
 
-              {/* Text */}
-              <h3 className={`mt-6 text-lg font-semibold ${badge.text}`}>
-                {badge.title}
-              </h3>
-              <p className="text-sm text-gray-500 mt-1">{badge.subtitle}</p>
-            </div>
-          ))}
+          {/* SUBTEXT */}
+          <p
+            className="
+              mx-auto
+              mt-5
+              max-w-2xl
+              text-base
+              leading-relaxed
+              text-neutral-600
+              md:text-lg
+            "
+          >
+            When buyers can inspect products clearly before payment,
+            conversations feel more confident and straightforward.
+          </p>
         </div>
 
-        {/* Footer note */}
-        <p className="text-sm text-gray-400 mt-14">
-          Your badge appears on every verification you share
-        </p>
+        {/* ================= MAIN VISUAL ================= */}
+        <div className="mt-14 flex justify-center">
+          <div
+            className="
+              overflow-hidden
+              rounded-[36px]
+              border
+              border-neutral-100
+              bg-white
+              shadow-[0_30px_100px_rgba(0,0,0,0.08)]
+            "
+          >
+            <Image
+              src="/images/how-it-works/clear-proof-confidence.png"
+              alt="Seller and buyer interacting confidently through visual proof"
+              width={1800}
+              height={1200}
+              className="w-full max-w-7xl object-cover"
+            />
+          </div>
+        </div>
+
+        {/* ================= FOOTER NOTE ================= */}
+        <div className="mt-10 text-center">
+          <p
+            className="
+              mx-auto
+              max-w-2xl
+              text-sm
+              leading-relaxed
+              text-neutral-500
+              md:text-base
+            "
+          >
+            Buyers feel more comfortable moving forward when products are shown
+            clearly before payment.
+          </p>
+        </div>
       </div>
     </section>
   );

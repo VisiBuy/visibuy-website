@@ -1,60 +1,65 @@
-import { Camera, CreditCard, Award } from "lucide-react";
+import {
+  Camera,
+  Link2,
+  ShieldCheck,
+} from "lucide-react";
+
 import { PaymentTrustCard } from "./PaymentTrustCard";
 
 export function PaymentTrust() {
   return (
-    <section className="bg-neutral-800">
+    <section className="bg-neutral-900">
       <div className="mx-auto max-w-[1280px] px-4 py-16 md:px-8 md:py-24">
         {/* Heading */}
         <div className="mx-auto mb-16 max-w-4xl text-center">
-          <h2 className="font-heading text-2xl font-bold text-neutral-50 md:text-3xl lg:text-4xl ">
-            Once They Trust What They See, Make Them
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-white md:text-4xl">
+            When Buyers Feel Confident,
             <br />
-            Trust How They Pay.
+            Sales Move Faster.
           </h2>
 
-          <p className="mt-4 text-neutral-300 text-2xl sm:text-base">
-            With Visibuy, You Can Take Safe Payments And Build A Trusted
-            Reputation That Grows With Every Sale.
+          <p className="mt-5 text-base leading-relaxed text-neutral-300 md:text-lg">
+            Visibuy helps buyers feel more comfortable before payment by letting
+            them see proof of the exact product first.
           </p>
         </div>
 
         {/* Cards */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <PaymentTrustCard
-            title="Visual Verification"
-            description="Upload your proof once. Share it anywhere. Let buyers see it’s real."
+            title="Record the Exact Item"
+            description="Show buyers the actual product they’ll receive through clear visual proof."
             points={[
-              "Auto-timestamped proof",
-              "Seller ID watermark",
-              "Share on any platform",
+              "Record live product proof",
+              "Capture the exact item",
+              "Reduce buyer hesitation",
             ]}
-            icon={<Camera className="h-10 w-10 " />}
+            icon={<Camera className="h-10 w-10" />}
             bgColor="bg-brand-primary"
           />
 
           <PaymentTrustCard
-            title="Protected Payment"
-            description="Let buyers pay confidently. Their money stays safe until delivery."
+            title="Share Anywhere Buyers Shop"
+            description="Send your verification link across WhatsApp, Instagram, Jiji, or anywhere buyers already chat."
             points={[
-              "Escrow protection",
-              "No COD fraud risk",
-              "Guaranteed payment on delivery",
+              "One shareable verification link",
+              "Works across social commerce",
+              "Simple buyer experience",
             ]}
-            icon={<CreditCard className="h-10 w-10 " />}
-            bgColor="bg-brand-success"
+            icon={<Link2 className="h-10 w-10" />}
+            bgColor="bg-orange-500"
           />
 
           <PaymentTrustCard
-            title="Trust Badges"
-            description="Earn badges that show buyers you’re a verified seller they can rely on."
+            title="Build Buyer Confidence"
+            description="Help buyers feel more confident before payment by showing proof of the exact product."
             points={[
-              "Build verified reputation",
-              "Stand out from competitors",
-              "Attract more buyers",
+              "Increase buyer confidence",
+              "Create trust through visibility",
+              "Help buyers move forward",
             ]}
-            icon={<Award className="h-10 w-10 " />}
-            bgColor="bg-orange-500"
+            icon={<ShieldCheck className="h-10 w-10" />}
+            bgColor="bg-brand-success"
           />
         </div>
       </div>

@@ -1,50 +1,94 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { howItWorksSteps } from "@/features/data/steps";
-import { GoArrowUpRight } from "react-icons/go";
+
+import Image from "next/image";
 
 export default function HowItWorksSteps() {
   return (
-    <section className="relative pt-10 pb-32">
-      {/* Base blue background */}
-      <div className="absolute inset-0 bg-blue-600" />
+    <section className="relative overflow-hidden bg-[#F7FAFF] py-16 md:py-20 lg:py-24">
+      {/* BACKGROUND GLOW */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,123,255,0.08)_0%,transparent_45%)]" />
 
-      {/* Translucent layer */}
-      <div className="absolute inset-x-6 -top-20 bottom-0 rounded-[32px] bg-white/20 backdrop-blur-md" />
-
-      <div className="relative max-w-6xl mx-auto px-6 -mt-16">
-        {/* White container */}
-        <div className="bg-white rounded-[28px] px-10 pt-12 pb-32 shadow-xl">
-          {/* Header */}
-          <div className="flex justify-between items-center mb-10">
-            <h2 className="text-2xl text-black font-semibold">How It Works</h2>
-            <span className="text-xl text-black">5 Step Flow</span>
+      <div className="relative mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
+        {/* ================= HEADER ================= */}
+        <div className="mx-auto max-w-3xl text-center">
+          {/* LABEL */}
+          <div className="inline-flex items-center rounded-full border border-blue-100 bg-white px-4 py-2 shadow-sm">
+            <span className="text-sm font-medium text-brand-primary">
+              5-Step Verification Flow
+            </span>
           </div>
 
-          {/* Swiper */}
-          <Swiper spaceBetween={24} slidesPerView={3.5}>
-            {howItWorksSteps.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="relative w-[272px]">
-                  {/* Floating arrow */}
-                  <div className="absolute -top-0 -right-1 z-20 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center shadow-lg">
-                    <GoArrowUpRight className="text-white text-lg" />
-                  </div>
+          {/* HEADING */}
+          <h2
+            className="
+              mt-6
+              text-3xl
+              font-heading
+              font-bold
+              leading-tight
+              tracking-tight
+              text-neutral-900
+              md:text-5xl
+            "
+          >
+            From product proof
+            <br />
+            to buyer confidence.
+          </h2>
 
-                  {/* Card */}
-                  <div className="group bg-white border border-gray-200 rounded-2xl shadow-xl p-5 pt-6 pr-10">
-                    <p className="text-xl text-black mb-1">{item.step}</p>
+          {/* SUBTEXT */}
+          <p
+            className="
+              mx-auto
+              mt-5
+              max-w-2xl
+              text-base
+              leading-relaxed
+              text-neutral-600
+              md:text-lg
+            "
+          >
+            A simple visual flow that helps buyers inspect products more
+            confidently before payment.
+          </p>
+        </div>
 
-                    <p className="text-xs text-black">{item.title}</p>
+        {/* ================= VISUAL WALKTHROUGH ================= */}
+        <div className="mt-14 flex justify-center">
+          <div
+            className="
+              overflow-hidden
+              rounded-[32px]
+              border
+              border-white
+              bg-white
+              shadow-[0_30px_100px_rgba(0,0,0,0.08)]
+            "
+          >
+            <Image
+              src="/images/how-it-works/how-it-works-flow.png"
+              alt="Visibuy verification walkthrough"
+              width={1800}
+              height={1300}
+              className="w-full max-w-7xl object-cover"
+            />
+          </div>
+        </div>
 
-                    <p className="text-xs text-black mb-4">{item.subtitle}</p>
-
-                    <div className="h-[140px] rounded-xl bg-blue-600 shadow-2xl transition-transform duration-500 ease-out group-hover:scale-105" />
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        {/* ================= FOOTER NOTE ================= */}
+        <div className="mt-10 text-center">
+          <p
+            className="
+              mx-auto
+              max-w-2xl
+              text-sm
+              leading-relaxed
+              text-neutral-500
+              md:text-base
+            "
+          >
+            Clear proof helps conversations feel smoother before payment.
+          </p>
         </div>
       </div>
     </section>

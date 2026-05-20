@@ -1,120 +1,156 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+import { Button } from "@/shared/components/ui/button";
 
 export default function SimpleCreditBilling() {
   return (
-    <section className="py-28 bg-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        {/* Heading */}
-        <h2 className="text-4xl font-semibold text-black mb-2">
-          Simple Credit Billing, Pay Only For What You Use
-        </h2>
-        <p className="text-base text-gray-500 font-semibold mb-16">
-          Each verification link costs 3 credits (₦1,500). Load credits anytime —
-          no subscriptions or hidden fees.
-        </p>
+    <section className="relative overflow-hidden bg-white py-16 md:py-20 lg:py-24">
+      {/* SOFT BACKGROUND */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(0,123,255,0.05)_0%,transparent_40%)]" />
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
-          {/* Starter Pack */}
-          <div className="shadow-xl border border-gray-300 rounded-2xl px-8 py-10 text-center">
-            <h3 className="text-3xl text-black font-semibold mb-1">
-              Starter Pack
-            </h3>
-            <p className="text-2xl text-black font-semibold mb-1">₦5,000</p>
-            <p className="text-sm text-gray-500 mb-8">
-              Perfect for new sellers testing VisiBuy.
-            </p>
-
-            <ul className="space-y-3 text-sm text-left ml-3 mb-10">
-              <li className="flex items-center gap-8">
-                <span className="w-4 h-4 rounded-full bg-green-500" />
-                <span className="text-black font-semibold">
-                  10 credits for verification
-                </span>
-              </li>
-            </ul>
-
-            <Link
-              href="https://app.visibuy.com.ng/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="w-full py-3 rounded-full bg-[#EFF6FF] text-black font-medium text-sm">
-                Choose Starter Pack
-              </button>
-            </Link>
-          </div>
-
-          {/* Pro Pack (Highlighted) */}
-          <div className="relative rounded-2xl px-8 py-12 text-center bg-gradient-to-b from-blue-600 to-green-500 text-white shadow-xl">
-            {/* Badge */}
-            <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-xs font-semibold px-10 py-2 rounded-full">
-              Most Popular
+      <div className="relative mx-auto max-w-5xl px-5 md:px-8 lg:px-12">
+        {/* ================= HEADER ================= */}
+        <div className="mx-auto max-w-3xl text-center">
+          {/* LABEL */}
+          <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2">
+            <span className="text-sm font-medium text-brand-primary">
+              Simple Seller Access
             </span>
-
-            <h3 className="text-2xl font-semibold mb-2 tracking-normal">
-              Pro Pack
-            </h3>
-            <p className="text-2xl font-semibold mb-4">₦25,000</p>
-            <p className="text-sm text-white/80 mb-8">
-              Perfect for active sellers building trust.
-            </p>
-
-            <ul className="space-y-3 text-white text-sm text-left mb-10">
-              <li className="flex items-center gap-8">
-                <span className="w-4 h-4 rounded-full bg-white" />
-                <span>50 credits for verification</span>
-              </li>
-            </ul>
-
-            <Link
-              href="https://app.visibuy.com.ng/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="w-full py-3 rounded-full bg-[#FCFCFC] font-medium text-blue-600 text-sm">
-                Choose Pro Pack
-              </button>
-            </Link>
           </div>
 
-          {/* Growth Pack */}
-          <div className="border border-gray-300 shadow-xl rounded-2xl px-8 py-10 text-center">
-            <h3 className="text-3xl text-black font-semibold mb-2">
-              Growth Pack
-            </h3>
-            <p className="text-2xl text-black font-semibold mb-1">₦15,000</p>
-            <p className="text-sm text-gray-500 mb-8">
-              Perfect for consistent sellers.
-            </p>
+          {/* HEADING */}
+          <h2
+            className="
+              mt-6
+              text-3xl
+              font-heading
+              font-bold
+              leading-tight
+              tracking-tight
+              text-neutral-900
+              md:text-5xl
+            "
+          >
+            Start creating
+            <br />
+            verifications easily.
+          </h2>
 
-            <ul className="space-y-3 text-sm text-left ml-3 mb-10">
-              <li className="flex items-center gap-8">
-                <span className="w-4 h-4 rounded-full bg-green-500" />
-                <span className="text-black font-semibold">
-                  30 credits for verification
-                </span>
-              </li>
-            </ul>
+          {/* SUBTEXT */}
+          <p
+            className="
+              mx-auto
+              mt-5
+              max-w-2xl
+              text-base
+              leading-relaxed
+              text-neutral-600
+              md:text-lg
+            "
+          >
+            Pay only for the verifications you create with simple
+            pay-as-you-go access.
+          </p>
+        </div>
 
-            <Link
-              href="https://app.visibuy.com.ng/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="w-full py-3 rounded-full bg-[#EFF6FF] text-black font-medium text-sm">
-                Choose Growth Pack
-              </button>
-            </Link>
+        {/* ================= PRICING CARD ================= */}
+        <div className="mt-14 flex justify-center">
+          <div
+            className="
+              w-full
+              max-w-2xl
+              overflow-hidden
+              rounded-[36px]
+              border
+              border-neutral-200
+              bg-white
+              shadow-[0_25px_100px_rgba(0,0,0,0.06)]
+            "
+          >
+            {/* TOP */}
+            <div className="bg-gradient-to-r from-[#007BFF] to-[#28A745] px-8 py-10 text-center text-white">
+              <p className="text-sm font-medium uppercase tracking-[0.18em] text-white/80">
+                Pay-As-You-Go
+              </p>
+
+              <h3 className="mt-4 text-5xl font-bold tracking-tight">
+                ₦1,500
+              </h3>
+
+              <p className="mt-3 text-base text-white/90">
+                Per verification
+              </p>
+            </div>
+
+            {/* CONTENT */}
+            <div className="px-8 py-10 text-center">
+              <div className="space-y-4">
+                <div className="rounded-2xl bg-neutral-50 px-5 py-4">
+                  <p className="text-base font-medium text-neutral-900">
+                    3 Credits = 1 Verification
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-neutral-50 px-5 py-4">
+                  <p className="text-base font-medium text-neutral-900">
+                    No subscriptions required
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-neutral-50 px-5 py-4">
+                  <p className="text-base font-medium text-neutral-900">
+                    Load credits anytime
+                  </p>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="mt-10 flex justify-center">
+                <Link
+                  href="https://app.visibuy.com.ng/signup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="lg"
+                    className="
+                      rounded-full
+                      bg-gradient-to-r
+                      from-brand-primary
+                      to-brand-success
+                      px-8
+                      text-base
+                      font-semibold
+                      text-white
+                      shadow-[0_12px_40px_rgba(0,123,255,0.20)]
+                      hover:opacity-95
+                    "
+                  >
+                    Create Your First Verification
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Footer note */}
-        <p className="text-xs text-gray-500 mt-14">
-          1 credit = ₦500 • Each verification link costs 3 credits (₦1,500)
-        </p>
+        {/* ================= FOOTER NOTE ================= */}
+        <div className="mt-10 text-center">
+          <p
+            className="
+              text-sm
+              leading-relaxed
+              text-neutral-500
+              md:text-base
+            "
+          >
+            Simple pricing helps sellers get started without complicated plans.
+          </p>
+        </div>
       </div>
     </section>
   );

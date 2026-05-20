@@ -5,68 +5,136 @@ import { Button } from "@/shared/components/ui/button";
 export function Hero() {
   return (
     <section className="bg-neutral-100 overflow-hidden">
-      <div className="mx-auto max-w-[1280px] px-4 py-12 sm:py-16 md:px-6 md:py-20 lg:px-8 lg:py-24">
-        {/* Text content */}
-        <div className="mx-auto max-w-2xl text-center">
-          <h1 className="font-heading text-2xl font-bold leading-tight text-neutral-900 sm:text-3xl md:text-4xl lg:text-5xl">
-            Buyers Don&apos;t Trust Words,
-            <br />
-            <span className="text-brand-primary">Show Them Proof</span>
+      <div
+        className="
+          mx-auto
+          max-w-[1280px]
+          px-4
+          py-12
+          sm:py-16
+          md:px-6
+          md:py-20
+          lg:px-8
+          lg:py-24
+        "
+      >
+        {/* TEXT */}
+        <div className="mx-auto max-w-3xl text-center">
+          <h1
+            className="
+              font-heading
+              text-3xl
+              font-bold
+              leading-[1.05]
+              tracking-tight
+              text-neutral-900
+              sm:text-4xl
+              md:text-5xl
+              lg:text-6xl
+            "
+          >
+            Prove the{" "}
+            <span className="text-brand-primary">
+              Exact Item
+            </span>{" "}
+            Before Payment
           </h1>
 
-          <p className="mt-4 text-sm text-neutral-600 max-w-xl mx-auto sm:text-base px-2">
-            Visibuy helps you close more sales by letting buyers see real proof
-            of your product before they pay — all through one simple link.
+          <p
+            className="
+              mt-5
+              mx-auto
+              max-w-2xl
+              text-base
+              leading-relaxed
+              text-neutral-600
+              sm:text-lg
+            "
+          >
+            Help buyers trust what they’re paying for by
+            sharing visual proof of the exact product
+            through one simple verification link.
           </p>
 
-          <div className="mt-6 flex flex-col items-stretch gap-4 md:flex-row md:items-center md:justify-center md:gap-6 px-4 md:px-0">
-            <Link
-              href="https://app.visibuy.com.ng/signup"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="w-full md:w-auto px-8 py-6 text-base font-medium">
-                Create Your First Verification →
-              </Button>
-            </Link>
+          {/* CTA */}
+          {/* CTA */}
+<div
+  className="
+    mt-8
+    flex
+    flex-col
+    gap-3
+    md:flex-row
+    md:justify-center
+    md:gap-4
+  "
+>
+  <div className="w-full sm:w-auto">
+    <Link
+      href="https://app.visibuy.com.ng/signup"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block w-full"
+    >
+      <Button
+        className="
+          w-full
+          px-6
+          py-5
+          text-base
+          font-medium
+          
+        "
+      >
+        Create Your First Verification →
+      </Button>
+    </Link>
+  </div>
 
-            <Link href="/how-its-works">
-              <Button
-                variant="secondary"
-                className="w-full md:w-auto px-8 py-6 text-base font-medium"
-              >
-                See How Visibuy Works
-              </Button>
-            </Link>
-          </div>
+  <div className="w-full sm:w-auto">
+    <Link
+      href="/how-its-works"
+      className="block w-full"
+    >
+      <Button
+        variant="secondary"
+        className="
+          w-full
+          px-6
+          py-5
+          text-base
+          font-medium
+        "
+      >
+        See How It Works
+      </Button>
+    </Link>
+  </div>
+</div>
         </div>
 
-        {/* Images */}
-        <div className="mt-12 sm:mt-16 flex flex-col items-center gap-4 sm:gap-6 lg:flex-row lg:justify-center lg:gap-8">
-          {/* iPhone container */}
-          <div className="flex w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[422px] aspect-[422/400] items-center justify-center rounded-card bg-neutral-200">
+        {/* HERO MEDIA */}
+        <div className="mt-14 flex justify-center">
+          <div
+            className="
+              relative
+              w-full
+              max-w-[980px]
+              overflow-hidden
+              rounded-[32px]
+              border
+              border-black/5
+              bg-white
+              shadow-[0_20px_80px_rgba(0,0,0,0.08)]
+            "
+          >
             <Image
-              src="/images/home/iPhone-12-Mini.png"
-              alt="Visibuy mobile verification flow"
-              width={193}
-              height={391}
-              className="h-auto max-h-full max-w-[95%] md:max-w-[70%] rounded-card object-contain"
+              src="/images/home/hero-proof-illustration.png"
+              alt="Seller recording proof of the exact item before payment"
+              width={1400}
+              height={900}
+              className="w-full h-auto object-cover"
               priority
-            />
-          </div>
-
-          {/* Product image container */}
-          <div className="flex w-full max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[422px]
-                      h-[260px] sm:h-[300px] md:h-[360px] lg:h-[400px]
-                      items-center justify-center rounded-card overflow-hidden bg-black">
-            <video
-              src="/images/home/visibuy.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              controls
-              className="w-full h-full rounded-card object-contain"
             />
           </div>
         </div>
